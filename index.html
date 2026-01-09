@@ -23,7 +23,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
             text-align: center;
             -webkit-tap-highlight-color: transparent;
         }
@@ -45,6 +44,12 @@
             font-weight: 400;
             opacity: 0.9;
             margin-bottom: 28px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         p {
@@ -97,6 +102,14 @@
             transform: translateY(-2px);
         }
 
+        section {
+            padding: 60px 0;
+        }
+
+        section:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -141,21 +154,38 @@
 
     <!-- About Me Section -->
     <section id="about" class="container">
-    <h2>About Me</h2>
+        <h2>About Me</h2>
 
-    <p>
-        I am a data-driven problem solver passionate about using analytics and Operations Research to optimize complex systems. I specialize in transforming raw data into actionable insights, building predictive models, and improving decision-making in logistics, supply chains, energy systems, and other data-intensive domains.
-    </p>
+        <p>
+            I am a data-driven problem solver passionate about using analytics and Operations Research to optimize complex systems. I specialize in transforming raw data into actionable insights, building predictive models, and improving decision-making in logistics, supply chains, energy systems, and other data-intensive domains.
+        </p>
 
-    <p>
-        I have hands-on experience using Python for data cleaning, geospatial analysis, optimization, and data modeling. I enjoy breaking down ambiguous problems into structured solutions that create measurable impact.
-    </p>
+        <p>
+            I have hands-on experience using Python for data cleaning, geospatial analysis, optimization, and data modeling. I enjoy breaking down ambiguous problems into structured solutions that create measurable impact.
+        </p>
 
-    <p>
-        Recently, I completed the <strong>MIT Emerging Talent in Computer and Data Science</strong> program, where I strengthened my foundation in programming, data analysis, and applied problem-solving. I am continually building my portfolio through practical projects and learning initiatives to prepare for roles where data-driven strategies are critical.
-    </p>
-</section>
+        <p>
+            Recently, I completed the <strong>MIT Emerging Talent in Computer and Data Science</strong> program, where I strengthened my foundation in programming, data analysis, and applied problem-solving. I am continually building my portfolio through practical projects and learning initiatives to prepare for roles where data-driven strategies are critical.
+        </p>
+    </section>
 
+    <!-- Projects Section (Placeholder) -->
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+
+        <p>
+            Coming soon: a showcase of data-driven projects demonstrating analytics, optimization, and modeling skills.
+        </p>
+    </section>
+
+    <!-- Contact Section (Placeholder) -->
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+
+        <p>
+            You can reach me via email at <strong>ridwanbabatundeayinde@gmail.com</strong> or connect with me on LinkedIn via www.linkedin.com/in/ridwanayinde.
+        </p>
+    </section>
 
 </body>
 </html>
