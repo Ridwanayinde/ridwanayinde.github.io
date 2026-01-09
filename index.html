@@ -47,15 +47,17 @@
             opacity: 0.9;
             margin-bottom: 28px;
             white-space: nowrap; /* prevent line breaks on mobile */
-            overflow-x: auto;    /* allow small horizontal scroll if needed */
+            overflow-x: auto;    /* horizontal scroll if necessary */
         }
 
         p {
             font-size: 1.15rem;
             line-height: 1.7;
-            max-width: 650px;
+            max-width: 450px;     /* control paragraph width for balance */
             margin: 0 auto 40px;
             opacity: 0.95;
+            text-align: center;
+            word-wrap: break-word;
         }
 
         .buttons {
@@ -120,10 +122,11 @@
             }
             h2 {
                 font-size: 1rem;
-                white-space: normal; /* allow line break on very small phones */
+                white-space: normal; /* allow line breaks on very small phones */
             }
             p {
-                font-size: 1.05rem;
+                font-size: 1rem;
+                max-width: 380px; /* narrower for phone, balanced lines */
             }
             .btn {
                 font-size: 0.9rem;
