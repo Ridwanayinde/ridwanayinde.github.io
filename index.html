@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Reset */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -20,19 +19,18 @@
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
             background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-            background-attachment: fixed;
             color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
             -webkit-tap-highlight-color: transparent;
         }
 
         .container {
             max-width: 900px;
             padding: 40px 20px;
-            text-align: center;
-            animation: fadeIn 1.1s ease-in-out;
+            animation: fadeIn 1.2s ease-in-out;
         }
 
         h1 {
@@ -45,18 +43,15 @@
             font-size: 1.4rem;
             font-weight: 400;
             opacity: 0.9;
-            margin-bottom: 26px;
-            white-space: nowrap;
+            margin-bottom: 28px;
         }
 
-        .tagline {
+        p {
             font-size: 1.15rem;
-            line-height: 1.65;
-            max-width: 420px;        /* KEY: controlled width */
+            line-height: 1.7;
+            max-width: 650px;
             margin: 0 auto 40px;
             opacity: 0.95;
-            text-align: center;
-            text-wrap: balance;      /* modern text balancing */
         }
 
         .buttons {
@@ -72,7 +67,7 @@
             border-radius: 30px;
             font-size: 0.95rem;
             font-weight: 600;
-            transition: all 0.25s ease;
+            transition: all 0.3s ease;
             cursor: pointer;
             appearance: none;
             min-width: 120px;
@@ -101,27 +96,26 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(14px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        /* Mobile tuning */
+        /* Mobile */
         @media (max-width: 600px) {
             h1 {
                 font-size: 2.4rem;
             }
             h2 {
-                font-size: 1.05rem;
-                white-space: normal;
+                font-size: 1.1rem;
             }
-            .tagline {
+            p {
                 font-size: 1.05rem;
-                max-width: 360px;
-            }
-            .btn {
-                font-size: 0.9rem;
-                padding: 10px 22px;
-                min-width: 105px;
             }
         }
     </style>
@@ -132,7 +126,7 @@
         <h1>Ridwan B. Ayinde</h1>
         <h2>Data Analytics | Operations Research | Optimization</h2>
 
-        <p class="tagline">
+        <p>
             I build data-driven models to analyze, optimize, and improve complex systems.
         </p>
 
