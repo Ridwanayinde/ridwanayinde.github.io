@@ -218,13 +218,21 @@
 
     <section id="contact">
       <h2>Get In Touch</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+      <form class="contact-form" 
+        action="https://formspree.io/f/xaqqwdzd" 
+        method="POST">
+    
+      <!-- Your existing fields, but add name attributes (important for Formspree) -->
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    
+      <!-- Recommended anti-spam honeypot field (invisible to humans, catches bots) -->
+      <input type="text" name="_gotcha" style="display:none" />
+    
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   </main>
 
