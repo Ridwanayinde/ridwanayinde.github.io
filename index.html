@@ -21,7 +21,7 @@
       --accent: #3b82f6;
       --accent-dark: #2563eb;
       --border: #334155;
-      --hero-bg: #0d47a1;
+      --hero-bg: #0d47a1; /* Your preferred dark blue */
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,51 +34,104 @@
     
     .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
     
-    /* Sidebar */
-    nav {
-      position: fixed;
-      top: 0; left: 0;
-      height: 100vh;
-      width: 280px;
+    /* Top Navigation with Hamburger */
+    header {
       background: var(--card);
-      border-right: 1px solid var(--border);
-      padding: 3rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      z-index: 10;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
     }
     
-    .logo { font-size: 1.8rem; font-weight: 700; color: var(--accent); margin-bottom: 3rem; }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
     
-    .nav-links { list-style: none; }
-    .nav-links li { margin: 1.5rem 0; }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    
     .nav-links a {
       color: var(--text-light);
       text-decoration: none;
-      font-size: 1.1rem;
       font-weight: 500;
-      transition: all 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
+      transition: color 0.3s;
     }
-    .nav-links a:hover, .nav-links a.active { color: var(--accent); transform: translateX(8px); }
     
-    .socials { display: flex; gap: 1.5rem; }
-    .socials a { color: var(--text-light); font-size: 1.6rem; transition: color 0.3s; }
-    .socials a:hover { color: var(--accent); }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent); }
     
-    /* Main Content */
-    main { margin-left: 280px; }
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      color: var(--text-light);
+      cursor: pointer;
+    }
     
-    /* Hero Section (inspired by your example) */
+    /* Mobile Menu */
+    #nav-toggle { display: none; }
+    .mobile-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--card);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: all 0.4s ease;
+      pointer-events: none;
+    }
+    
+    #nav-toggle:checked ~ .mobile-menu {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .mobile-menu li {
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    
+    .mobile-menu a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: block;
+    }
+    
+    .mobile-menu a:hover { color: var(--accent); }
+    
+    /* Hero */
     .hero {
       background: var(--hero-bg);
       color: white;
       text-align: center;
-      padding: 8rem 2rem 6rem;
+      padding: 10rem 2rem 6rem;
+      margin-top: 70px; /* space for fixed header */
     }
+    
     .hero img {
       width: 180px; height: 180px;
       border-radius: 50%;
@@ -87,12 +140,14 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       margin-bottom: 1.5rem;
     }
+    
     .hero h1 {
       font-size: 3.5rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
     }
+    
     .hero h2 {
       font-size: 1.8rem;
       font-weight: 600;
@@ -100,16 +155,14 @@
       margin-bottom: 1.5rem;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
+    
     .hero .tagline {
       font-size: 1.1rem;
       color: #e0e0e0;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
-    
-    section { padding: 6rem 0; scroll-margin-top: 80px; }
-    h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; }
     
     .btn {
       display: inline-block;
@@ -122,6 +175,9 @@
       transition: all 0.3s;
     }
     .btn:hover { background: var(--accent-dark); transform: translateY(-3px); }
+    
+    section { padding: 6rem 0; scroll-margin-top: 100px; }
+    h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; text-align: center; }
     
     .projects-grid {
       display: grid;
@@ -167,12 +223,16 @@
       border-radius: 12px;
       border: 1px solid var(--border);
       margin-bottom: 2rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .skills-list {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
+      justify-content: center;
       margin-top: 1rem;
     }
     .skill-tag {
@@ -184,47 +244,56 @@
     }
     
     @media (max-width: 900px) {
-      nav { position: relative; height: auto; width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 2rem; }
-      main { margin-left: 0; }
-      .nav-links { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
-      .hero { padding: 6rem 1rem 4rem; }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .hero { padding: 8rem 1rem 5rem; }
       .hero h1 { font-size: 2.8rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Sidebar Navigation -->
-  <nav>
-    <div>
-      <div class="logo">Ridwan</div>
+  <!-- Header with Hamburger Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">Ridwan B. Ayinde</a>
+      
+      <!-- Desktop Nav -->
       <ul class="nav-links">
-        <li><a href="#home" class="active"><i class="ti ti-home"></i> Home</a></li>
-        <li><a href="#about"><i class="ti ti-user"></i> About</a></li>
-        <li><a href="#experience"><i class="ti ti-briefcase"></i> Experience</a></li>
-        <li><a href="#projects"><i class="ti ti-code-dots"></i> Projects</a></li>
-        <li><a href="#contact"><i class="ti ti-mail"></i> Contact</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <!-- Hamburger Toggle -->
+      <label for="nav-toggle" class="hamburger"><i class="ti ti-menu-2"></i></label>
+    </div>
+    
+    <input type="checkbox" id="nav-toggle">
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <div class="socials">
-      <a href="https://github.com/ridwanayinde" target="_blank"><i class="ti ti-brand-github"></i></a>
-      <a href="https://linkedin.com/in/ridwan-ayinde" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
-      <a href="mailto:your.email@example.com"><i class="ti ti-mail"></i></a>
-    </div>
-  </nav>
+  </header>
 
   <main class="container">
     
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <img src="profile.jpg" 
-           alt="Ridwan B. Ayinde" class="shadow-lg">
-      <h1>Data Analyst</h1>
-      <h2>Operations & Applied Analytics</h2>
+      <img src="profile.jpg" alt="Ridwan B. Ayinde">
+      <h1>Ridwan B. Ayinde</h1>
+      <h2>Data Analyst | Operations & Applied Analytics</h2>
       <div class="tagline">
         • Data-Driven Decision Support • Optimization & Forecasting • Predictive Modeling • Python & Tableau
       </div>
-      <a href="#projects" class="btn" style="margin-top: 2rem;">View My Work →</a>
+      <a href="#projects" class="btn">View My Work →</a>
     </section>
 
     <!-- About -->
@@ -272,8 +341,7 @@
       <h2>Featured Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" 
-               alt="Energy Consumption Dashboard" class="project-img">
+          <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" alt="Energy Consumption Dashboard" class="project-img">
           <div class="project-content">
             <h3>Energy Consumption Dashboard</h3>
             <p>Interactive Tableau dashboard visualizing energy usage patterns across facilities, identifying savings opportunities.</p>
@@ -287,8 +355,7 @@
         </div>
         
         <div class="project-card">
-          <img src="https://i.ytimg.com/vi/JEdyVHc-bZk/maxresdefault.jpg" 
-               alt="Supply Chain Optimization" class="project-img">
+          <img src="https://i.ytimg.com/vi/JEdyVHc-bZk/maxresdefault.jpg" alt="Supply Chain Optimization" class="project-img">
           <div class="project-content">
             <h3>Supply Chain Optimization</h3>
             <p>Python-based analysis reducing logistics delays by 22% through route and inventory optimization.</p>
@@ -311,10 +378,11 @@
     </section>
   </main>
 
-  <!-- Active Nav JS -->
+  <!-- Active link highlighting JS -->
   <script>
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
@@ -327,5 +395,6 @@
       });
     });
   </script>
+
 </body>
 </html>
