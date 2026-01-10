@@ -4,35 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ridwan B. Ayinde | Data Analyst</title>
-  <meta name="description" content="Data Analyst specializing in Energy & Supply Chain | SQL, Python, Tableau, Power BI"/>
+  <meta name="description" content="Data Analyst | Energy & Supply Chain Specialist | SQL, Python, Tableau"/>
   
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Tabler Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   
   <style>
     :root {
       --bg: #0f172a;
+      --card: #1e293b;
       --text: #e2e8f0;
       --text-light: #94a3b8;
       --accent: #3b82f6;
       --accent-dark: #2563eb;
-      --card: #1e293b;
       --border: #334155;
+      --hero-bg: #0d47a1;
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      min-height: 100vh;
     }
     
     .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
@@ -61,62 +58,70 @@
       text-decoration: none;
       font-size: 1.1rem;
       font-weight: 500;
-      transition: all 0.3s ease;
+      transition: all 0.3s;
       display: flex;
       align-items: center;
       gap: 0.8rem;
     }
     .nav-links a:hover, .nav-links a.active { color: var(--accent); transform: translateX(8px); }
     
-    .socials { display: flex; gap: 1.2rem; margin-top: 2rem; }
-    .socials a { color: var(--text-light); font-size: 1.5rem; transition: color 0.3s; }
+    .socials { display: flex; gap: 1.5rem; }
+    .socials a { color: var(--text-light); font-size: 1.6rem; transition: color 0.3s; }
     .socials a:hover { color: var(--accent); }
     
-    /* Main */
-    main { margin-left: 280px; padding: 4rem 0; }
-    section { padding: 6rem 0; scroll-margin-top: 80px; }
+    /* Main Content */
+    main { margin-left: 280px; }
     
-    h1, h2, h3 { font-weight: 700; }
-    h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-    .subtitle { font-size: 1.4rem; color: var(--text-light); margin-bottom: 2rem; }
-    .highlight { color: var(--accent); }
-    
-    .profile-pic {
-      width: 180px;
-      height: 180px;
+    /* Hero Section (inspired by your example) */
+    .hero {
+      background: var(--hero-bg);
+      color: white;
+      text-align: center;
+      padding: 8rem 2rem 6rem;
+    }
+    .hero img {
+      width: 180px; height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid var(--accent);
+      border: 5px solid rgba(255,255,255,0.8);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       margin-bottom: 1.5rem;
-      box-shadow: 0 10px 30px rgba(59,130,246,0.2);
     }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+    .hero h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #f0f0f0;
+      margin-bottom: 1.5rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+    .hero .tagline {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+    
+    section { padding: 6rem 0; scroll-margin-top: 80px; }
+    h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; }
     
     .btn {
       display: inline-block;
       background: var(--accent);
       color: white;
-      padding: 0.9rem 1.8rem;
+      padding: 1rem 2rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s;
-      margin-top: 1rem;
     }
     .btn:hover { background: var(--accent-dark); transform: translateY(-3px); }
-    
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin: 1.5rem 0;
-    }
-    .skill-tag {
-      background: rgba(59, 130, 246, 0.15);
-      color: var(--accent);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-size: 0.95rem;
-    }
     
     .projects-grid {
       display: grid;
@@ -130,7 +135,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
-      transition: all 0.4s ease;
+      transition: all 0.4s;
     }
     .project-card:hover {
       transform: translateY(-10px);
@@ -138,12 +143,7 @@
       box-shadow: 0 20px 30px rgba(0,0,0,0.3);
     }
     
-    .project-img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      background: #1e293b;
-    }
+    .project-img { width: 100%; height: 220px; object-fit: cover; }
     
     .project-content { padding: 1.8rem; }
     
@@ -154,12 +154,11 @@
       margin: 1rem 0;
     }
     .tech-tag {
-      background: rgba(59, 130, 246, 0.15);
+      background: rgba(59,130,246,0.15);
       color: var(--accent);
       padding: 0.4rem 0.9rem;
       border-radius: 999px;
       font-size: 0.85rem;
-      font-weight: 500;
     }
     
     .experience-item, .about-text {
@@ -170,10 +169,26 @@
       margin-bottom: 2rem;
     }
     
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    .skill-tag {
+      background: rgba(59,130,246,0.15);
+      color: var(--accent);
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    
     @media (max-width: 900px) {
       nav { position: relative; height: auto; width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 2rem; }
       main { margin-left: 0; }
       .nav-links { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+      .hero { padding: 6rem 1rem 4rem; }
+      .hero h1 { font-size: 2.8rem; }
     }
   </style>
 </head>
@@ -183,7 +198,6 @@
   <nav>
     <div>
       <div class="logo">Ridwan</div>
-      
       <ul class="nav-links">
         <li><a href="#home" class="active"><i class="ti ti-home"></i> Home</a></li>
         <li><a href="#about"><i class="ti ti-user"></i> About</a></li>
@@ -192,7 +206,6 @@
         <li><a href="#contact"><i class="ti ti-mail"></i> Contact</a></li>
       </ul>
     </div>
-    
     <div class="socials">
       <a href="https://github.com/ridwanayinde" target="_blank"><i class="ti ti-brand-github"></i></a>
       <a href="https://linkedin.com/in/ridwan-ayinde" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
@@ -202,14 +215,16 @@
 
   <main class="container">
     
-    <!-- Hero / Home -->
-    <section id="home">
-      <img src="https://media.licdn.com/dms/image/v2/D4E03AQH0z0zZ0Z0Z0g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1702980687257?e=2147483647&v=beta&t=example" 
-           alt="Ridwan B. Ayinde - Data Analyst" class="profile-pic">
-      <h1>Hello, I'm <span class="highlight">Ridwan B. Ayinde</span></h1>
-      <p class="subtitle">Data Analyst | Energy & Supply Chain Specialist</p>
-      <p>I transform complex data into actionable insights using SQL, Python, Tableau, and Power BI. Focused on driving efficiency in energy and supply chain operations.</p>
-      <a href="#projects" class="btn">View My Work →</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <img src="https://www.shutterstock.com/image-photo/office-portrait-satisfied-african-businessman-600nw-2619939795.jpg" 
+           alt="Ridwan B. Ayinde" class="shadow-lg">
+      <h1>Data Analyst</h1>
+      <h2>Operations & Applied Analytics</h2>
+      <div class="tagline">
+        • Data-Driven Decision Support • Optimization & Forecasting • Predictive Modeling • Python & Tableau
+      </div>
+      <a href="#projects" class="btn" style="margin-top: 2rem;">View My Work →</a>
     </section>
 
     <!-- About -->
@@ -242,7 +257,6 @@
           <li>Automated reporting with Python saving 15+ hours/week</li>
         </ul>
       </div>
-      
       <div class="experience-item">
         <h3>[Previous Role] • [Company Name]</h3>
         <p class="subtitle">[Month Year] – [Month Year]</p>
@@ -257,9 +271,8 @@
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="projects-grid">
-        
         <div class="project-card">
-          <img src="https://media.licdn.com/dms/image/v2/D4E12AQGDpWA38t4nlg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1702980687257?e=2147483647&v=beta&t=mxoXjYM8G-bGDAY3GMKvtSCBhKd4aka6g3OKpRPrYTE" 
+          <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" 
                alt="Energy Consumption Dashboard" class="project-img">
           <div class="project-content">
             <h3>Energy Consumption Dashboard</h3>
@@ -270,13 +283,12 @@
               <span class="tech-tag">Data Viz</span>
             </div>
             <a href="#" target="_blank" class="btn">Live Demo</a>
-            <a href="#" target="_blank">GitHub</a>
           </div>
         </div>
         
         <div class="project-card">
-          <img src="https://i.ytimg.com/vi/cz9fOg94kgs/maxresdefault.jpg" 
-               alt="Energy Cost Dashboard" class="project-img">
+          <img src="https://i.ytimg.com/vi/JEdyVHc-bZk/maxresdefault.jpg" 
+               alt="Supply Chain Optimization" class="project-img">
           <div class="project-content">
             <h3>Supply Chain Optimization</h3>
             <p>Python-based analysis reducing logistics delays by 22% through route and inventory optimization.</p>
@@ -286,12 +298,8 @@
               <span class="tech-tag">SQL</span>
             </div>
             <a href="#" target="_blank" class="btn">View Report</a>
-            <a href="#" target="_blank">GitHub</a>
           </div>
         </div>
-        
-        <!-- Add more project cards here if you have additional ones -->
-        
       </div>
     </section>
 
@@ -303,28 +311,21 @@
     </section>
   </main>
 
-  <!-- Active nav JS -->
+  <!-- Active Nav JS -->
   <script>
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
-
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 200) {
-          current = section.getAttribute('id');
-        }
+        if (scrollY >= sectionTop - 200) current = section.getAttribute('id');
       });
-
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
       });
     });
   </script>
-
 </body>
 </html>
