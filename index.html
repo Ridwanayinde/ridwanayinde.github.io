@@ -3,331 +3,376 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ridwan B. Ayinde | Data Analyst - Operations, Logistics, Supply Chain Analytics & Energy</title>
+  <title>Ridwan Ayinde | Data Analyst</title>
+  <meta name="description" content="Data Analyst specializing in Energy & Supply Chain | SQL, Python, Tableau, Power BI"/>
   
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Tabler Icons (free, lightweight) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Inter',system-ui,sans-serif; line-height:1.6; color:#333; background:#f8fafc; scroll-behavior:smooth; }
-    .container { max-width:1200px; margin:0 auto; padding:0 1.5rem; }
-
+    :root {
+      --bg: #0f172a;
+      --text: #e2e8f0;
+      --text-light: #94a3b8;
+      --accent: #3b82f6;
+      --accent-dark: #2563eb;
+      --card: #1e293b;
+      --border: #334155;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    /* Sidebar Navigation */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
-      background: rgba(30,58,138,0.97);
-      backdrop-filter: blur(10px);
-      padding: 1.1rem 0;
-      z-index: 1000;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 280px;
+      background: var(--card);
+      border-right: 1px solid var(--border);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 10;
     }
-    .nav-container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { color:white; font-size:1.4rem; font-weight:700; text-decoration:none; }
-    .nav-links a { color:white; text-decoration:none; margin-left:1.8rem; font-weight:500; font-size:0.95rem; transition:0.3s; }
-    .nav-links a:hover { color:#bfdbfe; }
-
-    header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      color:white;
-      padding: 12rem 0 7rem;
-      text-align:center;
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 3rem;
     }
-    .profile-img {
-      width:170px; height:170px;
-      border-radius:50%;
-      object-fit:cover;
-      border:5px solid rgba(255,255,255,0.3);
-      margin-bottom:1.8rem;
-      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    
+    .nav-links {
+      list-style: none;
     }
-    h1 { font-size:3.2rem; font-weight:700; margin-bottom:0.4rem; line-height:1.1; }
-    .subtitle { font-size:1.35rem; opacity:0.95; margin-bottom:2rem; }
+    
+    .nav-links li {
+      margin: 1.5rem 0;
+    }
+    
+    .nav-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      transform: translateX(8px);
+    }
+    
+    .socials {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    
+    .socials a {
+      color: var(--text-light);
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    
+    .socials a:hover {
+      color: var(--accent);
+    }
+    
+    /* Main Content */
+    main {
+      margin-left: 280px;
+      padding: 4rem 0;
+    }
+    
+    section {
+      padding: 6rem 0;
+      scroll-margin-top: 80px;
+    }
+    
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .subtitle {
+      font-size: 1.4rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+    
+    .highlight {
+      color: var(--accent);
+    }
+    
     .btn {
-      background:white;
-      color:#1e3a8a;
-      padding:0.9rem 2.2rem;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:600;
-      display:inline-block;
-      transition:0.3s;
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.9rem 1.8rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      margin-top: 1.5rem;
     }
-    .btn:hover { background:#e0f2fe; transform:translateY(-3px); }
-
-    section { padding:7rem 0 6rem; }
-    h2 {
-      font-size:2.6rem;
-      text-align:center;
-      margin-bottom:3rem;
-      color:#1e3a8a;
-      position:relative;
+    
+    .btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-3px);
     }
-    h2::after {
-      content:''; width:80px; height:4px; background:#3b82f6;
-      position:absolute; bottom:-12px; left:50%; transform:translateX(-50%);
-    }
-
-    .about-grid {
-      display:grid;
-      grid-template-columns:1fr 2fr;
-      gap:4rem;
-      align-items:center;
-    }
-    .about-text p { margin-bottom:1.2rem; font-size:1.1rem; }
-
+    
+    /* Projects */
     .projects-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-      gap:2.2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
     }
+    
     .project-card {
-      background:white;
-      border-radius:14px;
-      overflow:hidden;
-      box-shadow:0 8px 25px rgba(0,0,0,0.1);
-      transition:all 0.3s;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.4s ease;
     }
-    .project-card:hover { transform:translateY(-10px); box-shadow:0 18px 35px rgba(0,0,0,0.14); }
-    .project-img { width:100%; height:220px; object-fit:cover; }
-    .project-info { padding:1.6rem; }
-    .project-info h3 { font-size:1.5rem; margin-bottom:0.8rem; color:#1e3a8a; }
-    .tags { display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1rem; }
-    .tag { background:#e0f2fe; color:#1e40af; padding:0.4rem 0.9rem; border-radius:30px; font-size:0.9rem; }
-
-    .skills-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-      gap:1.8rem;
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.3);
     }
-    .skill-item {
-      background:white;
-      padding:1.6rem 1rem;
-      border-radius:12px;
-      text-align:center;
-      box-shadow:0 5px 18px rgba(0,0,0,0.08);
-      transition:all 0.3s;
+    
+    .project-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #1e293b;
     }
-    .skill-item:hover { transform:translateY(-8px); }
-
-    .contact-form { max-width:700px; margin:0 auto; }
-    input, textarea {
-      width:100%; padding:1.2rem; margin-bottom:1.5rem;
-      border:1px solid #d1d5db; border-radius:10px; font-size:1.1rem;
+    
+    .project-content {
+      padding: 1.8rem;
     }
-    button {
-      background:#1e3a8a; color:white; border:none;
-      padding:1.2rem 3rem; font-size:1.1rem; border-radius:10px;
-      cursor:pointer; transition:0.3s;
+    
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0;
     }
-    button:hover { background:#1e40af; }
-
-    footer {
-      background:#0f172a; color:white;
-      text-align:center; padding:4rem 0; margin-top:6rem;
+    
+    .tech-tag {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
     }
-
-    @media (max-width:900px) {
-      header { padding: 11rem 0 6rem; }
-      h1 { font-size:2.6rem; line-height:1.05; }
-      .profile-img { width:150px; height:150px; margin-bottom:1.5rem; }
-      .nav-links a { margin-left:1.2rem; font-size:0.9rem; }
-      .about-grid { grid-template-columns:1fr; text-align:center; }
+    
+    /* Experience & About */
+    .experience-item, .about-text {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 2rem;
     }
-
-    @media (max-width:600px) {
-      .nav-container { flex-direction:column; gap:0.8rem; padding:0.8rem 0; }
-      .nav-links a { margin:0 0.9rem; font-size:0.85rem; }
-      .container { padding:0 1.2rem; }
+    
+    /* Responsive */
+    @media (max-width: 900px) {
+      nav {
+        position: relative;
+        height: auto;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 2rem;
+      }
+      
+      main {
+        margin-left: 0;
+      }
+      
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+      }
     }
-    .hero-content {
-  padding: 2rem 1rem 5rem; /* Extra bottom space */
-}
-
-.profile-img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid rgba(255,255,255,0.3);
-  margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.hero-name {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-  line-height: 1.1;
-}
-
-.hero-role {
-  font-size: 2.2rem;          /* Slightly smaller than name, but still prominent */
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-  color: rgba(255,255,255,0.95);
-}
-
-.hero-subtitle {
-  font-size: 1.6rem;
-  font-weight: 500;
-  opacity: 0.9;
-  margin-bottom: 1.2rem;
-}
-
-.hero-keywords {
-  font-size: 1.1rem;
-  max-width: 720px;
-  margin: 0 auto 2rem;
-  opacity: 0.85;
-  line-height: 1.5;
-}
-
-.btn {
-  background: white;
-  color: #1e3a8a;
-  padding: 0.9rem 2.4rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #e0f2fe;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* Mobile adjustments - name stays readable, hierarchy preserved */
-@media (max-width: 768px) {
-  .hero-name   { font-size: 2.8rem; }
-  .hero-role   { font-size: 1.9rem; }
-  .hero-subtitle { font-size: 1.4rem; }
-  .profile-img { width: 150px; height: 150px; margin-bottom: 1.8rem; }
-  .hero-keywords { font-size: 1rem; }
-}
   </style>
 </head>
 <body>
 
+  <!-- Sidebar Navigation -->
   <nav>
-    <div class="container nav-container">
-      <a href="#" class="logo">Ridwan B. Ayinde</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
+    <div>
+      <div class="logo">Ridwan</div>
+      
+      <ul class="nav-links">
+        <li><a href="#home" class="active"><i class="ti ti-home"></i> Home</a></li>
+        <li><a href="#about"><i class="ti ti-user"></i> About</a></li>
+        <li><a href="#experience"><i class="ti ti-briefcase"></i> Experience</a></li>
+        <li><a href="#projects"><i class="ti ti-code-dots"></i> Projects</a></li>
+        <li><a href="#contact"><i class="ti ti-mail"></i> Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="socials">
+      <a href="https://github.com/ridwanayinde" target="_blank"><i class="ti ti-brand-github"></i></a>
+      <a href="https://linkedin.com/in/ridwan-ayinde" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="mailto:your.email@example.com"><i class="ti ti-mail"></i></a>
     </div>
   </nav>
 
-  <header>
-      <div class="container hero-content text-center">
-        <img src="profile.jpg" alt="Ridwan B. Ayinde" class="profile-img">
-
-        <h1 class="hero-name">Ridwan B. Ayinde</h1>
-    
-        <p class="hero-role">Data Analyst</p>
-    
-        <p class="hero-subtitle">
-          Operations & Applied Analytics
-      </p>
-    
-      <div class="hero-keywords">
-        • Data-Driven Decision Support • Optimization & Forecasting • Predictive Modeling • Python & Tableau
-      </div>
-
-      <a href="#projects" class="btn mt-4">Explore My Projects ↓</a>
-    </div>
-  </header>
-
   <main class="container">
+    
+    <!-- Hero / Home -->
+    <section id="home">
+      <h1>Hello, I'm <span class="highlight">Ridwan Ayinde</span></h1>
+      <p class="subtitle">Data Analyst | Energy & Supply Chain Specialist</p>
+      <p>I transform complex data into actionable insights using SQL, Python, Tableau, and Power BI. Focused on driving efficiency in energy and supply chain operations.</p>
+      <a href="#projects" class="btn">View My Work →</a>
+    </section>
 
+    <!-- About -->
     <section id="about">
       <h2>About Me</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>Results-driven Data Analyst specializing in operations optimization, logistics networks, supply chain analytics, and energy analytics.</p>
-          <p>I transform complex datasets into actionable insights using SQL, Python, Tableau, and Excel to drive efficiency, cost reduction, and informed decision-making.</p>
-          <p>Focused on delivering measurable business impact through predictive modeling, process improvement, and high-impact data visualizations.</p>
-        </div>
+      <div class="about-text">
+        <p>I'm a passionate data analyst with [X] years of experience turning raw data into business value. My expertise lies in energy sector analytics, supply chain optimization, and building interactive dashboards that help stakeholders make informed decisions.</p>
+        <p>Tech stack I love: Python (Pandas, NumPy), SQL, Tableau, Power BI, Excel (Advanced), Data Visualization, Statistical Analysis.</p>
       </div>
     </section>
 
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Data Analyst • [Company Name]</h3>
+        <p class="subtitle">[Month Year] – Present</p>
+        <ul>
+          <li>Analyzed supply chain data leading to 18% cost reduction</li>
+          <li>Built Tableau dashboards tracking energy consumption metrics</li>
+          <li>Automated reporting with Python saving 15+ hours/week</li>
+        </ul>
+      </div>
+      
+      <div class="experience-item">
+        <h3>[Previous Role] • [Company Name]</h3>
+        <p class="subtitle">[Month Year] – [Month Year]</p>
+        <ul>
+          <li>Developed SQL queries for large-scale datasets</li>
+          <li>Created predictive models for demand forecasting</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
     <section id="projects">
       <h2>Featured Projects</h2>
-        <div class="project">
-          <h3>Data-Driven Last-Mile Logistics Optimization...</h3>
-          <img src="logistics-optimization-thumbnails.png" 
-            alt="Logistics Optimization Project"
-            class="img-fluid w-100"
-            style="width: 100%; height: auto;">
-          <p>
-            Developed a data-driven solution to optimize last-mile delivery for small businesses in emerging markets by clustering Points of Interest (POIs) into efficient delivery zones and calculating optimized routes.
-            Reduced potential delivery time and fuel costs through geospatial analysis.
-            <br><br>
-            • Clustered thousands of locations using K-Means algorithms
-            <br>• Built road network routing with OSMnx and NetworkX
-            <br>• Created interactive visualizations showing zones and routes
-            <br><br>
-            Tech stack: Python, GeoPandas, OSMnx, NetworkX, Scikit-learn, Matplotlib
-          </p>
-          <a href="https://github.com/Ridwanayinde/Data-Driven-Last-Mile-Logistics-Optimization-for-Small-Businesses-in-Emerging-Markets">View on GitHub</a>
-        </div>
-
+      <div class="projects-grid">
+        
         <div class="project-card">
-          <img src="https://via.placeholder.com/600x340/1e3a8a/ffffff?text=Energy+Analytics" alt="Energy Project" class="project-img">
-          <div class="project-info">
-            <h3>Energy Consumption Forecasting Model</h3>
-            <p>Python-based predictive model improving energy demand accuracy by 25% for better planning and resource allocation.</p>
-            <div class="tags"><span>Python</span><span>Time Series</span><span>Energy Analytics</span></div>
+          <img src="https://via.placeholder.com/600x400/1e293b/ffffff?text=Project+1+Dashboard" alt="Project 1" class="project-img">
+          <div class="project-content">
+            <h3>Energy Consumption Dashboard</h3>
+            <p>Interactive Tableau dashboard visualizing energy usage patterns across facilities, identifying savings opportunities.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Tableau</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Data Viz</span>
+            </div>
+            <a href="#" target="_blank" class="btn">Live Demo</a>
+            <a href="#" target="_blank">GitHub</a>
           </div>
         </div>
-
-        <!-- Add more project cards here as needed -->
+        
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400/1e293b/ffffff?text=Project+2+Analysis" alt="Project 2" class="project-img">
+          <div class="project-content">
+            <h3>Supply Chain Optimization</h3>
+            <p>Python-based analysis reducing logistics delays by 22% through route and inventory optimization.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+            <a href="#" target="_blank" class="btn">View Report</a>
+            <a href="#" target="_blank">GitHub</a>
+          </div>
+        </div>
+        
+        <!-- Add 1-2 more project cards here following the same pattern -->
+        
       </div>
     </section>
 
-    <section id="skills" style="background:#f1f5f9;">
-      <h2>Skills & Tools</h2>
-      <div class="skills-grid">
-        <div class="skill-item"><span>SQL</span>Advanced Querying & Optimization</div>
-        <div class="skill-item"><span>Python</span>Pandas • NumPy • Scikit-learn</div>
-        <div class="skill-item"><span>Tableau</span>Advanced Visualization & Dashboards</div>
-        <div class="skill-item"><span>Excel</span>Power Query • Advanced Modeling</div>
-        <div class="skill-item"><span>Statistics</span>Regression • Hypothesis Testing</div>
-        <div class="skill-item"><span>Data Cleaning</span>ETL Processes</div>
-      </div>
-    </section>
-
+    <!-- Contact -->
     <section id="contact">
       <h2>Get In Touch</h2>
-      <form class="contact-form" 
-        action="https://formspree.io/f/xaqqwdzd" 
-        method="POST">
-    
-      <!-- Your existing fields, but add name attributes (important for Formspree) -->
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-    
-      <!-- Recommended anti-spam honeypot field (invisible to humans, catches bots) -->
-      <input type="text" name="_gotcha" style="display:none" />
-    
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
+      <p>I'm currently open to new opportunities in data analytics. Feel free to reach out!</p>
+      <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2026 Ridwan B. Ayinde. Built for data-driven impact.</p>
-  </footer>
+  <!-- Simple JS for active nav link (optional enhancement) -->
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
