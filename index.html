@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ridwan B. Ayinde | Data Analyst - Operations, Logistics, Supply Chain & Energy</title>
+  <title>Ridwan B. Ayinde | Data Analyst - Operations, Logistics, Supply Chain Analytics & Energy</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,6 @@
     body { font-family:'Inter',system-ui,sans-serif; line-height:1.6; color:#333; background:#f8fafc; scroll-behavior:smooth; }
     .container { max-width:1200px; margin:0 auto; padding:0 1.5rem; }
 
-    /* Navigation - Fixed & better spacing */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -24,27 +23,15 @@
       z-index: 1000;
       box-shadow: 0 3px 12px rgba(0,0,0,0.15);
     }
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; }
     .logo { color:white; font-size:1.4rem; font-weight:700; text-decoration:none; }
-    .nav-links a {
-      color:white;
-      text-decoration:none;
-      margin-left:1.8rem;
-      font-weight:500;
-      font-size:0.95rem;
-      transition:0.3s;
-    }
+    .nav-links a { color:white; text-decoration:none; margin-left:1.8rem; font-weight:500; font-size:0.95rem; transition:0.3s; }
     .nav-links a:hover { color:#bfdbfe; }
 
-    /* Hero - Extra top space on mobile to avoid navbar overlap */
     header {
       background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
       color:white;
-      padding: 12rem 0 7rem; /* Increased top padding */
+      padding: 12rem 0 7rem;
       text-align:center;
     }
     .profile-img {
@@ -55,12 +42,7 @@
       margin-bottom:1.8rem;
       box-shadow:0 10px 30px rgba(0,0,0,0.3);
     }
-    h1 {
-      font-size:3.2rem;
-      font-weight:700;
-      margin-bottom:0.4rem;
-      line-height:1.1;
-    }
+    h1 { font-size:3.2rem; font-weight:700; margin-bottom:0.4rem; line-height:1.1; }
     .subtitle { font-size:1.35rem; opacity:0.95; margin-bottom:2rem; }
     .btn {
       background:white;
@@ -74,7 +56,6 @@
     }
     .btn:hover { background:#e0f2fe; transform:translateY(-3px); }
 
-    /* Sections */
     section { padding:7rem 0 6rem; }
     h2 {
       font-size:2.6rem;
@@ -88,7 +69,6 @@
       position:absolute; bottom:-12px; left:50%; transform:translateX(-50%);
     }
 
-    /* About - Single column on mobile, two on desktop */
     .about-grid {
       display:grid;
       grid-template-columns:1fr 2fr;
@@ -97,7 +77,6 @@
     }
     .about-text p { margin-bottom:1.2rem; font-size:1.1rem; }
 
-    /* Projects & Skills (unchanged for brevity) */
     .projects-grid {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
@@ -132,10 +111,26 @@
     }
     .skill-item:hover { transform:translateY(-8px); }
 
-    /* Mobile adjustments */
+    .contact-form { max-width:700px; margin:0 auto; }
+    input, textarea {
+      width:100%; padding:1.2rem; margin-bottom:1.5rem;
+      border:1px solid #d1d5db; border-radius:10px; font-size:1.1rem;
+    }
+    button {
+      background:#1e3a8a; color:white; border:none;
+      padding:1.2rem 3rem; font-size:1.1rem; border-radius:10px;
+      cursor:pointer; transition:0.3s;
+    }
+    button:hover { background:#1e40af; }
+
+    footer {
+      background:#0f172a; color:white;
+      text-align:center; padding:4rem 0; margin-top:6rem;
+    }
+
     @media (max-width:900px) {
-      header { padding: 11rem 0 6rem; } /* More space below fixed nav */
-      h1 { font-size:2.6rem; line-height:1.05; } /* Name fits better */
+      header { padding: 11rem 0 6rem; }
+      h1 { font-size:2.6rem; line-height:1.05; }
       .profile-img { width:150px; height:150px; margin-bottom:1.5rem; }
       .nav-links a { margin-left:1.2rem; font-size:0.9rem; }
       .about-grid { grid-template-columns:1fr; text-align:center; }
@@ -166,27 +161,76 @@
     <div class="container">
       <img src="profile.jpg" alt="Ridwan B. Ayinde" class="profile-img">
       <h1>Ridwan B. Ayinde</h1>
-      <p class="subtitle">Data Analyst | Operations • Logistics • Supply Chain Analytics • Energy</p>
+      <p class="subtitle">Data Analyst | Operations • Logistics • Supply Chain Analytics • Energy Analytics</p>
       <a href="#projects" class="btn">Explore My Projects ↓</a>
     </div>
   </header>
 
-  <!-- Rest of your sections remain the same - About, Projects, Skills, Contact, Footer -->
-  <!-- Just paste them from previous code if you want to keep them unchanged -->
+  <main class="container">
 
-  <!-- Example shortened About for brevity -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>Results-driven Data Analyst specializing in operations optimization, logistics, supply chain analytics, and energy insights.</p>
-        <p>I transform complex data into actionable business recommendations using SQL, Python, Power BI, Tableau, and advanced analytics techniques.</p>
-        <p>Focused on delivering measurable impact through predictive modeling, process improvement, and insightful dashboards.</p>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Results-driven Data Analyst specializing in operations optimization, logistics networks, supply chain analytics, and energy analytics.</p>
+          <p>I transform complex datasets into actionable insights using SQL, Python, Tableau, and Excel to drive efficiency, cost reduction, and informed decision-making.</p>
+          <p>Focused on delivering measurable business impact through predictive modeling, process improvement, and high-impact data visualizations.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Add your Projects, Skills, Contact & Footer sections here (copy from previous version) -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x340/3b82f6/ffffff?text=Supply+Chain+Dashboard" alt="Supply Chain Project" class="project-img">
+          <div class="project-info">
+            <h3>Supply Chain Optimization Dashboard</h3>
+            <p>Interactive Tableau dashboard analyzing inventory and routes, reducing logistics costs by 18% through data-driven insights.</p>
+            <div class="tags"><span>Tableau</span><span>SQL</span><span>Logistics</span></div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x340/1e3a8a/ffffff?text=Energy+Analytics" alt="Energy Project" class="project-img">
+          <div class="project-info">
+            <h3>Energy Consumption Forecasting Model</h3>
+            <p>Python-based predictive model improving energy demand accuracy by 25% for better planning and resource allocation.</p>
+            <div class="tags"><span>Python</span><span>Time Series</span><span>Energy Analytics</span></div>
+          </div>
+        </div>
+
+        <!-- Add more project cards here as needed -->
+      </div>
+    </section>
+
+    <section id="skills" style="background:#f1f5f9;">
+      <h2>Skills & Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><span>SQL</span>Advanced Querying & Optimization</div>
+        <div class="skill-item"><span>Python</span>Pandas • NumPy • Scikit-learn</div>
+        <div class="skill-item"><span>Tableau</span>Advanced Visualization & Dashboards</div>
+        <div class="skill-item"><span>Excel</span>Power Query • Advanced Modeling</div>
+        <div class="skill-item"><span>Statistics</span>Regression • Hypothesis Testing</div>
+        <div class="skill-item"><span>Data Cleaning</span>ETL Processes</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Ridwan B. Ayinde. Built for data-driven impact.</p>
+  </footer>
 
 </body>
 </html>
