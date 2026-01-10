@@ -11,12 +11,11 @@
   
   <style>
     :root {
-      --bg: #f8f9fa;
+      --primary: #0d47a1; /* Your strong blue for hero & accents */
+      --primary-dark: #0a3d8c;
+      --bg: #f8f9fa; /* Light neutral body */
       --text: #212529;
       --text-light: #495057;
-      --primary: #0d47a1; /* Your strong blue */
-      --primary-dark: #0a3d8c;
-      --accent: #0d6efd;
       --card: white;
       --border: #dee2e6;
     }
@@ -51,13 +50,8 @@
     .logo { font-size: 1.6rem; font-weight: 700; color: white; text-decoration: none; }
     
     .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.3s;
-    }
-    .nav-links a:hover { opacity: 0.8; }
+    .nav-links a { color: white; text-decoration: none; font-weight: 500; }
+    .nav-links a:hover { opacity: 0.85; }
     
     .hamburger { display: none; font-size: 2rem; color: white; cursor: pointer; }
     
@@ -86,7 +80,7 @@
       background: var(--primary);
       color: white;
       text-align: center;
-      padding: 12rem 2rem 8rem;
+      padding: 10rem 2rem 7rem;
       margin-top: 70px;
     }
     
@@ -95,46 +89,43 @@
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid rgba(255,255,255,0.3);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border: 5px solid rgba(255,255,255,0.8);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       margin-bottom: 2rem;
     }
     
     .hero h1 {
-      font-size: 4rem;
+      font-size: 3.5rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
     }
     
     .hero h2 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-    }
-    
-    .hero h3 {
       font-size: 1.8rem;
       font-weight: 600;
+      color: #f0f0f0;
       margin-bottom: 1.5rem;
-      opacity: 0.95;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
     
-    .tagline {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 2.5rem;
-      opacity: 0.9;
+    .hero .tagline {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
     
     .btn {
       display: inline-block;
       background: white;
       color: var(--primary);
-      padding: 1rem 2.2rem;
+      padding: 1rem 2rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      margin: 0.8rem;
+      margin: 1rem;
       transition: all 0.3s;
     }
     .btn:hover {
@@ -211,10 +202,9 @@
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .hamburger { display: block; }
-      .hero { padding: 10rem 1.5rem 6rem; }
+      .hero { padding: 9rem 1.5rem 6rem; }
       .hero h1 { font-size: 3rem; }
-      .hero h2 { font-size: 2.2rem; }
-      .hero h3 { font-size: 1.5rem; }
+      .hero h2 { font-size: 1.6rem; }
     }
   </style>
 </head>
@@ -248,15 +238,18 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section - Exactly like your example -->
   <section id="home" class="hero">
     <img src="profile.jpg" alt="Ridwan B. Ayinde">
-    <h1>Ridwan B. Ayinde</h1>
-    <h2>Data Analyst</h2>
-    <h3>Operations & Applied Analytics</h3>
+    
+    <h1>Data Analyst</h1>
+    
+    <h2>Operations & Applied Analytics</h2>
+    
     <div class="tagline">
       • Data-Driven Decision Support • Optimization & Forecasting • Predictive Modeling • Python, SQL, Tableau & Power BI
     </div>
+    
     <a href="Ridwan_B_Ayinde_Resume.pdf" download class="btn">Download Resume</a>
     <a href="#projects" class="btn">View My Work →</a>
   </section>
@@ -306,7 +299,7 @@
     <h2>Featured Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" alt="Energy Dashboard">
+        <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" alt="Energy Consumption Dashboard">
         <div class="project-content">
           <h3>Energy Consumption Dashboard</h3>
           <p>Interactive Tableau dashboard visualizing energy usage patterns across facilities, identifying savings opportunities.</p>
@@ -319,7 +312,7 @@
       </div>
       
       <div class="project-card">
-        <img src="https://i.ytimg.com/vi/JEdyVHc-bZk/maxresdefault.jpg" alt="Supply Chain">
+        <img src="https://i.ytimg.com/vi/JEdyVHc-bZk/maxresdefault.jpg" alt="Supply Chain Optimization">
         <div class="project-content">
           <h3>Supply Chain Optimization</h3>
           <p>Python-based analysis reducing logistics delays by 22% through route and inventory optimization.</p>
@@ -336,7 +329,7 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Get In Touch</h2>
-    <div class="card" style="text-align:center;">
+    <div class="card" style="text-align: center;">
       <p>I'm currently open to new opportunities in data analytics. Feel free to reach out!</p>
       <a href="mailto:your.email@example.com" class="btn">Email Me</a>
     </div>
