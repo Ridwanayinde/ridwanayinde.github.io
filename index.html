@@ -1,191 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ridwan B. Ayinde | Data & Decision Science</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ridwan B. Ayinde | Data Analyst - Operations, Logistics, Supply Chain & Energy</title>
+  <meta name="description" content="Data Analyst specializing in Operations, Logistics, Supply Chain Optimization, and Energy Analytics. Transforming data into actionable insights."/>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8fafc;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            min-height: 100vh;
-            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            -webkit-tap-highlight-color: transparent;
-        }
+    /* Header / Hero */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: white;
+      padding: 8rem 0 6rem;
+      text-align: center;
+      position: relative;
+    }
 
-        .container {
-            max-width: 900px;
-            padding: 40px 20px;
-            animation: fadeIn 1.2s ease-in-out;
-        }
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-        h1 {
-            font-size: 3.2rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid rgba(255,255,255,0.25);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
 
-        h2 {
-            font-size: 1.4rem;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-bottom: 28px;
-        }
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
 
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+    .subtitle {
+      font-size: 1.4rem;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
 
-        p {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            max-width: 650px;
-            margin: 0 auto 40px;
-            opacity: 0.95;
-        }
+    .social-links a {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0 1rem;
+      text-decoration: none;
+      opacity: 0.9;
+      transition: all 0.3s;
+    }
 
-        .buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 60px;
-        }
+    .social-links a:hover {
+      opacity: 1;
+      transform: translateY(-4px);
+    }
 
-        .btn {
-            text-decoration: none;
-            padding: 12px 26px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            appearance: none;
-            min-width: 120px;
-        }
+    /* Sections */
+    section {
+      padding: 6rem 0;
+    }
 
-        .btn-primary {
-            background: #ffffff;
-            color: #203a43;
-            border: none;
-        }
+    h2 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #1e3a8a;
+      position: relative;
+    }
 
-        .btn-primary:hover {
-            background: #e6e6e6;
-            transform: translateY(-2px);
-        }
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #3b82f6;
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
 
-        .btn-outline {
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            background: transparent;
-        }
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: center;
+    }
 
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-        }
+    .about-text p {
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
 
-        section {
-            padding: 60px 0;
-        }
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
 
-        section:nth-child(even) {
-            background: rgba(255, 255, 255, 0.05);
-        }
+    .skill-item {
+      background: white;
+      padding: 1.8rem 1rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .skill-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
 
-        /* Mobile */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.4rem;
-            }
-            h2 {
-                font-size: 1.1rem;
-            }
-            p {
-                font-size: 1.05rem;
-            }
-        }
-    </style>
+    .skill-item span {
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+      display: block;
+      color: #3b82f6;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 1.8rem;
+    }
+
+    .project-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: #1e3a8a;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background: #e0f2fe;
+      color: #1e40af;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Contact */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 6rem 0 4rem; }
+      h1 { font-size: 2.6rem; }
+      .about-grid { grid-template-columns: 1fr; text-align: center; }
+      .profile-img { margin: 0 auto 2rem; }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <div class="container">
-        <h1>Ridwan B. Ayinde</h1>
-        <h2>Data Analytics | Operations Research | Optimization</h2>
-
-        <p>
-            I build data-driven models to analyze, optimize, and improve complex systems.
-        </p>
-
-        <div class="buttons">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
-        </div>
+  <header>
+    <div class="container hero-content">
+      <!-- Replace with your photo filename -->
+      <img src="profile.jpg" alt="Ridwan B. Ayinde" class="profile-img">
+      
+      <h1>Ridwan B. Ayinde</h1>
+      <p class="subtitle">Data Analyst | Operations • Logistics • Supply Chain • Energy</p>
+      
+      <div class="social-links">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ridwanayinde" target="_blank">GitHub</a>
+        <a href="mailto:your.email@example.com">Email</a>
+      </div>
     </div>
+  </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="container">
-        <h2>About Me</h2>
+  <main class="container">
 
-        <p>
-            I am a data-driven problem solver passionate about using analytics and Operations Research to optimize complex systems. I specialize in transforming raw data into actionable insights, building predictive models, and improving decision-making in logistics, supply chains, energy systems, and other data-intensive domains.
-        </p>
-
-        <p>
-            I have hands-on experience using Python for data cleaning, geospatial analysis, optimization, and data modeling. I enjoy breaking down ambiguous problems into structured solutions that create measurable impact.
-        </p>
-
-        <p>
-            Recently, I completed the <strong>MIT Emerging Talent in Computer and Data Science</strong> program, where I strengthened my foundation in programming, data analysis, and applied problem-solving. I am continually building my portfolio through practical projects and learning initiatives to prepare for roles where data-driven strategies are critical.
-        </p>
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div>
+          <p>Results-driven Data Analyst with expertise in optimizing operations, logistics networks, supply chain performance, and energy analytics.</p>
+          <p>Passionate about turning complex datasets into clear, actionable business insights using SQL, Python, Power BI, Tableau, and Excel.</p>
+        </div>
+        <div class="about-text">
+          <p>With experience across multiple industries, I specialize in predictive modeling, process optimization, cost reduction analysis, and dashboard development that drive measurable business impact.</p>
+          <p>Currently seeking opportunities to apply data-driven strategies in dynamic operations and energy environments.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section (Placeholder) -->
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-
-        <p>
-            Coming soon: a showcase of data-driven projects demonstrating analytics, optimization, and modeling skills.
-        </p>
+    <!-- Skills -->
+    <section id="skills" style="background:#f1f5f9;">
+      <h2>Skills & Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><span>SQL</span>Advanced Querying</div>
+        <div class="skill-item"><span>Python</span>Pandas • NumPy • Scikit-learn</div>
+        <div class="skill-item"><span>Power BI</span>DAX • Interactive Dashboards</div>
+        <div class="skill-item"><span>Tableau</span>Data Visualization</div>
+        <div class="skill-item"><span>Excel</span>Advanced • Power Query</div>
+        <div class="skill-item"><span>Statistics</span>Hypothesis Testing • Regression</div>
+      </div>
     </section>
 
-    <!-- Contact Section (Placeholder) -->
-    <section id="contact" class="container">
-        <h2>Contact</h2>
+    <!-- Projects (Add your real projects here) -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x340/3b82f6/ffffff?text=Supply+Chain+Dashboard" alt="Project" class="project-img">
+          <div class="project-info">
+            <h3>Supply Chain Optimization Dashboard</h3>
+            <p>Built interactive Power BI dashboard that reduced logistics costs by 18% through route and inventory analysis.</p>
+            <div class="tags">
+              <span>Power BI</span><span>SQL</span><span>Logistics</span>
+            </div>
+          </div>
+        </div>
 
-        <p>
-            You can reach me via email at <strong>ridwanbabatundeayinde@gmail.com</strong> or connect with me on LinkedIn via www.linkedin.com/in/ridwanayinde.
-        </p>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x340/1e3a8a/ffffff?text=Energy+Consumption+Forecast" alt="Project" class="project-img">
+          <div class="project-info">
+            <h3>Energy Demand Forecasting Model</h3>
+            <p>Developed time-series forecasting model in Python that improved energy planning accuracy by 25%.</p>
+            <div class="tags">
+              <span>Python</span><span>Time Series</span><span>Energy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add 1-2 more project cards as needed -->
+      </div>
     </section>
+
+    <!-- Contact -->
+    <section id="contact" style="background:#f1f5f9;">
+      <h2>Get In Touch</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Ridwan B. Ayinde. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
