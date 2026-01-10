@@ -4,117 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ridwan B. Ayinde | Data Analyst</title>
-  <meta name="description" content="Data Analyst specializing in Energy & Supply Chain | SQL, Python, Tableau, Power BI"/>
+  <meta name="description" content="Data Analyst | Operations & Applied Analytics | Energy & Supply Chain"/>
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   
   <style>
     :root {
-      --bg: #0a192f; /* Subtle dark blue-gray for body */
-      --hero-bg: #0d47a1; /* Strong blue hero */
-      --text: #ffffff;
-      --text-light: #ccd6f6;
-      --accent: #64ffda; /* Teal accent for highlights */
-      --card: rgba(255,255,255,0.05);
-      --border: rgba(100,255,218,0.2);
+      --bg: #f8f9fa;
+      --text: #212529;
+      --text-light: #495057;
+      --primary: #0d47a1; /* Your strong blue */
+      --primary-dark: #0a3d8c;
+      --accent: #0d6efd;
+      --card: white;
+      --border: #dee2e6;
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--bg);
-      color: var(--text-light);
+      color: var(--text);
       line-height: 1.6;
     }
     
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
-    
-    /* Top Navigation */
     header {
-      background: rgba(13,71,161,0.9);
+      background: var(--primary);
+      color: white;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     
     .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 2rem;
     }
     
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
+    .logo { font-size: 1.6rem; font-weight: 700; color: white; text-decoration: none; }
     
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      align-items: center;
-    }
-    
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
     .nav-links a {
-      color: var(--text-light);
+      color: white;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s;
+      transition: opacity 0.3s;
     }
+    .nav-links a:hover { opacity: 0.8; }
     
-    .nav-links a:hover { color: var(--accent); }
-    
-    .nav-links .resume-btn {
-      background: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      padding: 0.6rem 1.2rem;
-      border-radius: 4px;
-      transition: all 0.3s;
-    }
-    
-    .nav-links .resume-btn:hover {
-      background: var(--accent);
-      color: var(--bg);
-    }
-    
-    .hamburger { display: none; font-size: 2rem; color: var(--accent); cursor: pointer; }
+    .hamburger { display: none; font-size: 2rem; color: white; cursor: pointer; }
     
     #nav-toggle { display: none; }
-    
     .mobile-menu {
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      background: rgba(13,71,161,0.95);
+      background: var(--primary);
       transform: translateY(-100%);
       opacity: 0;
       transition: all 0.4s ease;
       pointer-events: none;
     }
-    
     #nav-toggle:checked ~ .mobile-menu {
       transform: translateY(0);
       opacity: 1;
       pointer-events: auto;
     }
-    
     .mobile-menu ul { list-style: none; padding: 1rem 0; }
     .mobile-menu li { padding: 1rem 2rem; text-align: center; }
-    .mobile-menu a { color: var(--text-light); font-size: 1.2rem; display: block; }
-    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-menu a { color: white; font-size: 1.2rem; display: block; }
     
-    /* Hero */
     .hero {
-      background: var(--hero-bg);
+      background: var(--primary);
       color: white;
       text-align: center;
       padding: 12rem 2rem 8rem;
@@ -122,135 +91,147 @@
     }
     
     .hero img {
-      width: 180px; height: 180px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid var(--accent);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 5px solid rgba(255,255,255,0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       margin-bottom: 2rem;
     }
     
     .hero h1 {
       font-size: 4rem;
       font-weight: 800;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.5rem;
     }
     
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.8rem;
     }
     
-    .hero .tagline {
-      font-size: 1.3rem;
+    .hero h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      opacity: 0.95;
+    }
+    
+    .tagline {
+      font-size: 1.2rem;
       max-width: 800px;
       margin: 0 auto 2.5rem;
       opacity: 0.9;
     }
     
-    .hero .btn {
-      background: var(--accent);
-      color: var(--bg);
-      padding: 1rem 2.5rem;
-      border-radius: 4px;
+    .btn {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 1rem 2.2rem;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      margin: 0 1rem 1rem;
-      display: inline-block;
+      margin: 0.8rem;
       transition: all 0.3s;
     }
-    
-    .hero .btn:hover {
-      background: #4dd0c8;
+    .btn:hover {
+      background: #f0f0f0;
       transform: translateY(-3px);
     }
     
-    section { padding: 8rem 0; scroll-margin-top: 100px; }
-    h2 { font-size: 2.8rem; text-align: center; margin-bottom: 3rem; color: white; }
+    section { padding: 8rem 2rem; max-width: 1000px; margin: 0 auto; }
+    h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary); }
     
-    .about-text, .experience-item {
+    .card {
       background: var(--card);
       padding: 2.5rem;
       border-radius: 12px;
-      border: 1px solid var(--border);
-      max-width: 900px;
-      margin: 0 auto 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+    }
+    
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .skill-tag {
+      background: #e7f1ff;
+      color: var(--primary);
+      padding: 0.7rem 1.4rem;
+      border-radius: 30px;
+      font-weight: 500;
     }
     
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 2rem;
     }
     
     .project-card {
       background: var(--card);
-      border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
-      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
+    .project-card:hover { transform: translateY(-8px); }
     
-    .project-card:hover { transform: translateY(-10px); border-color: var(--accent); }
+    .project-img { width: 100%; height: 200px; object-fit: cover; }
+    .project-content { padding: 1.5rem; }
     
-    .project-img { width: 100%; height: 220px; object-fit: cover; }
-    
-    .project-content { padding: 1.8rem; }
-    
-    .tech-stack { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1rem 0; }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0;
+    }
     .tech-tag {
-      background: rgba(100,255,218,0.1);
-      color: var(--accent);
-      padding: 0.5rem 1rem;
+      background: #e7f1ff;
+      color: var(--primary);
+      padding: 0.4rem 1rem;
       border-radius: 20px;
       font-size: 0.9rem;
-    }
-    
-    .skills-list { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem; }
-    .skill-tag {
-      background: rgba(100,255,218,0.1);
-      color: var(--accent);
-      padding: 0.7rem 1.4rem;
-      border-radius: 6px;
     }
     
     .socials {
       text-align: center;
       margin: 4rem 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
     .socials a { color: var(--text-light); margin: 0 1.5rem; transition: color 0.3s; }
-    .socials a:hover { color: var(--accent); }
+    .socials a:hover { color: var(--primary); }
     
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .hamburger { display: block; }
-      .hero { padding: 10rem 1rem 6rem; }
+      .hero { padding: 10rem 1.5rem 6rem; }
       .hero h1 { font-size: 3rem; }
-      .hero h2 { font-size: 2rem; }
+      .hero h2 { font-size: 2.2rem; }
+      .hero h3 { font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Navigation -->
+  <!-- Navigation -->
   <header>
     <div class="nav-container">
       <a href="#home" class="logo">Ridwan B. Ayinde</a>
-      
-      <!-- Desktop Nav -->
       <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a href="https://www.linkedin.com/in/ridwan-ayinde" target="_blank" class="resume-btn">LinkedIn</a>
+        <a href="https://linkedin.com/in/ridwan-ayinde" target="_blank">LinkedIn</a>
       </nav>
-      
-      <!-- Hamburger -->
       <label for="nav-toggle" class="hamburger"><i class="ti ti-menu-2"></i></label>
     </div>
     
@@ -262,111 +243,108 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://www.linkedin.com/in/ridwan-ayinde" target="_blank">LinkedIn</a></li>
+        <li><a href="https://linkedin.com/in/ridwan-ayinde" target="_blank">LinkedIn</a></li>
       </ul>
     </div>
   </header>
 
-  <main class="container">
-    
-    <!-- Hero -->
-    <section id="home" class="hero">
-      <img src="profile.jpg" alt="Ridwan B. Ayinde">
-      <h1>Ridwan B. Ayinde</h1>
-      <h2>Data Analyst</h2>
-      <div class="tagline">
-        • Energy & Supply Chain • Operations & Applied Analytics • Data-Driven Decision Support • Optimization & Forecasting • Predictive Modeling • Python, SQL, Tableau & Power BI
-      </div>
-      <a href="Ridwan_B_Ayinde_Resume.pdf" download class="btn">Download Resume</a>
-      <a href="#projects" class="btn">View My Work →</a>
-    </section>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <img src="profile.jpg" alt="Ridwan B. Ayinde">
+    <h1>Ridwan B. Ayinde</h1>
+    <h2>Data Analyst</h2>
+    <h3>Operations & Applied Analytics</h3>
+    <div class="tagline">
+      • Data-Driven Decision Support • Optimization & Forecasting • Predictive Modeling • Python, SQL, Tableau & Power BI
+    </div>
+    <a href="Ridwan_B_Ayinde_Resume.pdf" download class="btn">Download Resume</a>
+    <a href="#projects" class="btn">View My Work →</a>
+  </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="about-text">
-        <p>I'm a passionate data analyst with [X] years of experience turning raw data into business value. My expertise lies in energy sector analytics, supply chain optimization, and building interactive dashboards that help stakeholders make informed decisions.</p>
-        <p>Tech stack I love:</p>
-        <div class="skills-list">
-          <span class="skill-tag">Python (Pandas, NumPy)</span>
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Tableau</span>
-          <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">Excel (Advanced)</span>
-          <span class="skill-tag">Data Visualization</span>
-          <span class="skill-tag">Statistical Analysis</span>
-        </div>
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I'm a passionate data analyst with [X] years of experience turning raw data into business value. My expertise lies in energy sector analytics, supply chain optimization, and building interactive dashboards that help stakeholders make informed decisions.</p>
+      <p>Tech stack I love:</p>
+      <div class="skills-list">
+        <span class="skill-tag">Python (Pandas, NumPy)</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Excel (Advanced)</span>
+        <span class="skill-tag">Data Visualization</span>
+        <span class="skill-tag">Statistical Analysis</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Experience, Projects, Contact sections remain the same as your last version -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="experience-item">
-        <h3>Data Analyst • [Company Name]</h3>
-        <p>[Month Year] – Present</p>
-        <ul>
-          <li>Analyzed supply chain data leading to 18% cost reduction</li>
-          <li>Built Tableau dashboards tracking energy consumption metrics</li>
-          <li>Automated reporting with Python saving 15+ hours/week</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h3>[Previous Role] • [Company Name]</h3>
-        <p>[Month Year] – [Month Year]</p>
-        <ul>
-          <li>Developed SQL queries for large-scale datasets</li>
-          <li>Created predictive models for demand forecasting</li>
-        </ul>
-      </div>
-    </section>
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Data Analyst • [Company Name]</h3>
+      <p>[Month Year] – Present</p>
+      <ul>
+        <li>Analyzed supply chain data leading to 18% cost reduction</li>
+        <li>Built Tableau dashboards tracking energy consumption metrics</li>
+        <li>Automated reporting with Python saving 15+ hours/week</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>[Previous Role] • [Company Name]</h3>
+      <p>[Month Year] – [Month Year]</p>
+      <ul>
+        <li>Developed SQL queries for large-scale datasets</li>
+        <li>Created predictive models for demand forecasting</li>
+      </ul>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2>Featured Projects</h2>
-      <div class="projects-grid">
-        <!-- Your project cards here - same as before -->
-        <div class="project-card">
-          <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" alt="Energy Dashboard">
-          <div class="project-content">
-            <h3>Energy Consumption Dashboard</h3>
-            <p>Interactive Tableau dashboard...</p>
-            <div class="tech-stack">
-              <span class="tech-tag">Tableau</span><span class="tech-tag">SQL</span><span class="tech-tag">Data Viz</span>
-            </div>
-            <a href="#" class="btn">Live Demo</a>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" alt="Energy Dashboard">
+        <div class="project-content">
+          <h3>Energy Consumption Dashboard</h3>
+          <p>Interactive Tableau dashboard visualizing energy usage patterns across facilities, identifying savings opportunities.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Tableau</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Data Viz</span>
           </div>
         </div>
-        <!-- Add second project similarly -->
       </div>
-    </section>
+      
+      <div class="project-card">
+        <img src="https://i.ytimg.com/vi/JEdyVHc-bZk/maxresdefault.jpg" alt="Supply Chain">
+        <div class="project-content">
+          <h3>Supply Chain Optimization</h3>
+          <p>Python-based analysis reducing logistics delays by 22% through route and inventory optimization.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Get In Touch</h2>
-      <p>I'm open to new opportunities. Feel free to reach out!</p>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <div class="card" style="text-align:center;">
+      <p>I'm currently open to new opportunities in data analytics. Feel free to reach out!</p>
       <a href="mailto:your.email@example.com" class="btn">Email Me</a>
-    </section>
-
+    </div>
+    
     <div class="socials">
       <a href="https://github.com/ridwanayinde" target="_blank"><i class="ti ti-brand-github"></i></a>
       <a href="https://linkedin.com/in/ridwan-ayinde" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
     </div>
-  </main>
-
-  <!-- Active link JS -->
-  <script>
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 200) current = section.getAttribute('id');
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-      });
-    });
-  </script>
+  </section>
 </body>
 </html>
