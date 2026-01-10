@@ -11,9 +11,9 @@
   
   <style>
     :root {
-      --primary: #0d47a1; /* Your strong blue for hero & accents */
+      --primary: #0d47a1;
       --primary-dark: #0a3d8c;
-      --bg: #f8f9fa; /* Light neutral body */
+      --bg: #f8f9fa;
       --text: #212529;
       --text-light: #495057;
       --card: white;
@@ -28,6 +28,7 @@
       line-height: 1.6;
     }
     
+    /* Fixed header */
     header {
       background: var(--primary);
       color: white;
@@ -76,11 +77,14 @@
     .mobile-menu li { padding: 1rem 2rem; text-align: center; }
     .mobile-menu a { color: white; font-size: 1.2rem; display: block; }
     
+    /* Hero - FULL WIDTH blue on all devices */
     .hero {
       background: var(--primary);
       color: white;
       text-align: center;
       padding: 10rem 2rem 7rem;
+      width: 100vw;           /* forces full width */
+      margin-left: calc(-50vw + 50%);  /* centers it perfectly */
       margin-top: 70px;
     }
     
@@ -125,7 +129,7 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      margin: 1rem;
+      margin: 1.5rem 0.8rem;
       transition: all 0.3s;
     }
     .btn:hover {
@@ -238,7 +242,7 @@
     </div>
   </header>
 
-  <!-- Hero Section - Exactly like your example -->
+  <!-- Hero Section - Full-width blue fixed -->
   <section id="home" class="hero">
     <img src="profile.jpg" alt="Ridwan B. Ayinde">
     
@@ -247,14 +251,16 @@
     <h2>Operations & Applied Analytics</h2>
     
     <div class="tagline">
-      • Data-Driven Decision Support • Optimization & Forecasting • Predictive Modeling
+      • Data-Driven Decision Support • Optimization & Forecasting • Predictive Modeling • Python, SQL, Tableau & Power BI
     </div>
     
     <a href="Ridwan_B_Ayinde_Resume.pdf" download class="btn">Download Resume</a>
     <a href="#projects" class="btn">View My Work →</a>
   </section>
 
-  <!-- About Me -->
+  <!-- The rest of your sections (About, Experience, Projects, Contact) stay exactly the same -->
+  <!-- (I'm keeping them here so you can just copy-paste the full file) -->
+
   <section id="about">
     <h2>About Me</h2>
     <div class="card">
@@ -272,7 +278,6 @@
     </div>
   </section>
 
-  <!-- Experience -->
   <section id="experience">
     <h2>Experience</h2>
     <div class="card">
@@ -294,12 +299,11 @@
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects">
     <h2>Featured Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" alt="Energy Consumption Dashboard">
+        <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" alt="Energy Dashboard">
         <div class="project-content">
           <h3>Energy Consumption Dashboard</h3>
           <p>Interactive Tableau dashboard visualizing energy usage patterns across facilities, identifying savings opportunities.</p>
@@ -312,7 +316,7 @@
       </div>
       
       <div class="project-card">
-        <img src="https://i.ytimg.com/vi/JEdyVHc-bZk/maxresdefault.jpg" alt="Supply Chain Optimization">
+        <img src="https://i.ytimg.com/vi/JEdyVHc-bZk/maxresdefault.jpg" alt="Supply Chain">
         <div class="project-content">
           <h3>Supply Chain Optimization</h3>
           <p>Python-based analysis reducing logistics delays by 22% through route and inventory optimization.</p>
@@ -326,7 +330,6 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <h2>Get In Touch</h2>
     <div class="card" style="text-align: center;">
@@ -339,5 +342,6 @@
       <a href="https://linkedin.com/in/ridwan-ayinde" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
     </div>
   </section>
+
 </body>
 </html>
