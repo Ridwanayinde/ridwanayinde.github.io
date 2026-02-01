@@ -9,9 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .nav-blur { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        /* Smooth transition for mobile menu */
-        #mobile-menu { transition: all 0.3s ease-in-out; }
+        .nav-blur { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); }
+        .project-card:hover .project-icon { transform: scale(1.1) rotate(5deg); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -20,112 +19,173 @@
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 bg-emerald-600 rounded flex items-center justify-center text-white font-bold text-sm">RA</div>
-                <span class="text-lg md:text-xl font-bold tracking-tight text-slate-800">Ridwan B. Ayinde</span>
+                <span class="text-xl font-bold tracking-tight text-slate-800">Ridwan B. Ayinde</span>
             </div>
 
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600 uppercase tracking-widest">
-                <a href="#about" class="hover:text-emerald-600 transition">About</a>
-                <a href="#expertise" class="hover:text-emerald-600 transition">Expertise</a>
-                <a href="#projects" class="hover:text-emerald-600 transition">Projects</a>
-                <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
+                <a href="#about" class="hover:text-emerald-600 transition flex items-center gap-2"><i class="fas fa-user-circle"></i> About</a>
+                <a href="#expertise" class="hover:text-emerald-600 transition flex items-center gap-2"><i class="fas fa-layer-group"></i> Expertise</a>
+                <a href="#projects" class="hover:text-emerald-600 transition flex items-center gap-2"><i class="fas fa-chart-bar"></i> Projects</a>
+                <a href="#contact" class="hover:text-emerald-600 transition flex items-center gap-2"><i class="fas fa-paper-plane"></i> Contact</a>
             </div>
 
-            <button id="menu-btn" class="md:hidden text-slate-800 focus:outline-none">
+            <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4">
-            <a href="#about" class="block text-lg font-semibold text-slate-700 hover:text-emerald-600">About</a>
-            <a href="#expertise" class="block text-lg font-semibold text-slate-700 hover:text-emerald-600">Expertise</a>
-            <a href="#projects" class="block text-lg font-semibold text-slate-700 hover:text-emerald-600">Projects</a>
-            <a href="#contact" class="block text-lg font-semibold text-slate-700 hover:text-emerald-600">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 flex flex-col space-y-4 text-sm font-semibold text-slate-600 uppercase tracking-widest">
+            <a href="#about" class="hover:text-emerald-600 transition py-2">About</a>
+            <a href="#expertise" class="hover:text-emerald-600 transition py-2">Expertise</a>
+            <a href="#projects" class="hover:text-emerald-600 transition py-2">Projects</a>
+            <a href="#contact" class="hover:text-emerald-600 transition py-2">Contact</a>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-16 px-6">
-        <div class="max-w-6xl mx-auto text-left">
-            <span class="inline-block px-4 py-1 bg-emerald-100 text-emerald-700 rounded-full text-[10px] md:text-xs font-bold uppercase mb-6 tracking-widest">
-                Supply Chain & Operations Analyst
-            </span>
-            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 text-slate-900 leading-tight">
-                Data-Driven <br><span class="text-emerald-600">Optimization</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed mb-8">
-                I help organizations improve operational efficiency and reduce costs by applying data analytics and optimization thinking.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#projects" class="bg-slate-900 text-white text-center px-8 py-4 rounded-xl font-bold hover:bg-emerald-600 transition-all shadow-lg">View Projects</a>
-                <a href="resume.pdf" class="border-2 border-slate-300 text-slate-700 text-center px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition-all flex items-center justify-center gap-2">
-                    <i class="fas fa-download"></i> Download CV
-                </a>
+    <section id="home" class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-8">
+                <span class="inline-block px-4 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold uppercase mb-6 tracking-widest">
+                    Available for Strategic Roles
+                </span>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-slate-900 leading-tight">
+                    Supply Chain & <br><span class="text-emerald-600">Operations Analyst</span>
+                </h1>
+                <p class="text-xl text-slate-600 max-w-2xl leading-relaxed mb-8">
+                    I bridge the gap between complex data and operational excellence. Focused on <strong>demand forecasting</strong>, <strong>inventory optimization</strong>, and building <strong>decision-support dashboards</strong> that drive ROI.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="bg-slate-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-emerald-600 transition-all shadow-lg hover:-translate-y-1 text-center w-full md:w-auto">View My Portfolio</a>
+                    <a href="resume.pdf" class="border-2 border-slate-300 text-slate-700 px-8 py-3 rounded-lg font-bold hover:bg-slate-100 transition-all flex items-center justify-center gap-2 w-full md:w-auto">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="md:col-span-4 hidden md:block text-right">
+                <div class="relative inline-block">
+                    <div class="absolute inset-0 bg-emerald-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Optimization Icon" class="relative z-10 opacity-80 w-64 h-64">
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="max-w-6xl mx-auto px-6 mb-20">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="max-w-6xl mx-auto px-6 -mt-10 mb-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
-                <p class="text-emerald-600 text-2xl font-bold">15%</p>
-                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Cost Savings</p>
+                <p class="text-emerald-600 text-2xl font-bold">15%+</p>
+                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Cost Reduction</p>
             </div>
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
                 <p class="text-emerald-600 text-2xl font-bold">98%</p>
-                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Forecast Accuracy</p>
+                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Forecast Accuracy</p>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center md:block">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
                 <p class="text-emerald-600 text-2xl font-bold">500+</p>
-                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">SKUs Managed</p>
+                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">SKUs Managed</p>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center md:block">
-                <p class="text-emerald-600 text-2xl font-bold">Expert</p>
-                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">SQL / Python</p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+                <p class="text-emerald-600 text-2xl font-bold">SQL/BI</p>
+                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Expertise Level</p>
             </div>
         </div>
     </div>
 
     <section id="about" class="py-20 bg-white px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-6 text-slate-900 italic">About Me</h2>
-            <p class="text-slate-600 leading-relaxed text-lg">
-                I am an Analyst focused on turning operational data into decision-support tools. Whether it's inventory planning, procurement analysis, or dashboard development, I focus on the bottom line: <strong>efficiency and cost control.</strong>
+        <div class="max-w-4xl mx-auto text-left">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-4 text-slate-900">
+                <i class="fas fa-user-circle text-emerald-600"></i> About Me
+            </h2>
+            <p class="text-lg text-slate-600 leading-relaxed space-y-4">
+                I am a Supply Chain & Operations Analyst with a strong analytical foundation and a practical understanding of real-world operations. My work focuses on using data not for reporting alone, but as a decision-support tool for planning, efficiency, and cost control. 
+                <br><br>
+                I thrive at the intersection of <strong>data science</strong> and <strong>logistics</strong>, turning messy datasets into clear strategic roadmaps.
             </p>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-16 text-center text-slate-900">Core Expertise</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">
+                    <i class="fas fa-boxes-stacked"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Supply Chain & Ops</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Inventory planning, procurement analysis, logistics coordination, KPI design, and process improvement.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Data & Analytics</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Python (Pandas), SQL, Excel, Power BI, data modeling, forecasting, and automated dashboard development.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all">
+                <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 text-2xl">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Decision Support</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Operations research mindset, optimization thinking, scenario analysis, and actionable business insights.</p>
+            </div>
         </div>
     </section>
 
     <section id="projects" class="py-20 bg-slate-900 text-white px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12">Key Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
-                    <h3 class="text-xl font-bold mb-4 text-emerald-400">Demand Forecasting Model</h3>
-                    <p class="text-sm text-slate-300 mb-6">Built a time-series model in Python to analyze historical sales, reducing stock-outs by 20%.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] font-mono bg-slate-700 px-2 py-1 rounded">Python</span>
-                        <span class="text-[10px] font-mono bg-slate-700 px-2 py-1 rounded">Statistics</span>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6 text-left">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4 italic">Selected Projects</h2>
+                    <p class="text-slate-400 max-w-md">Real-world applications of analytics to solve complex logistical bottlenecks.</p>
+                </div>
+                <a href="#" class="text-emerald-400 font-bold flex items-center gap-2 hover:underline">See all on GitHub <i class="fab fa-github"></i></a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 hover:border-emerald-500 transition-all project-card">
+                    <h3 class="text-2xl font-bold mb-6 text-emerald-400">Demand Forecasting Model</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-sm"><strong class="text-slate-300 uppercase text-xs">Problem:</strong> High stock-out risk during peak seasons due to erratic demand patterns.</p>
+                        <p class="text-sm"><strong class="text-slate-300 uppercase text-xs">Approach:</strong> Built a time-series model in Python using Prophet to analyze 3 years of historical sales.</p>
+                        <p class="text-sm"><strong class="text-slate-300 uppercase text-xs">Results:</strong> Reduced stock-outs by 20% and improved forecast accuracy by 15%.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="bg-slate-700 px-3 py-1 rounded text-xs font-mono">Python</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded text-xs font-mono">Excel</span>
                     </div>
                 </div>
-                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
-                    <h3 class="text-xl font-bold mb-4 text-emerald-400">SCM Performance Dashboard</h3>
-                    <p class="text-sm text-slate-300 mb-6">Developed an automated Power BI dashboard to track supplier lead times and warehouse KPIs.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] font-mono bg-slate-700 px-2 py-1 rounded">Power BI</span>
-                        <span class="text-[10px] font-mono bg-slate-700 px-2 py-1 rounded">SQL</span>
+
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 hover:border-emerald-500 transition-all project-card">
+                    <h3 class="text-2xl font-bold mb-6 text-emerald-400">Supply Chain Performance Dashboard</h3>
+                    <div class="space-y-4 mb-8">
+                        <p class="text-sm"><strong class="text-slate-300 uppercase text-xs">Problem:</strong> Lack of real-time visibility into supplier lead times and warehouse efficiency.</p>
+                        <p class="text-sm"><strong class="text-slate-300 uppercase text-xs">Approach:</strong> Integrated SQL databases with Power BI to create automated live KPI trackers.</p>
+                        <p class="text-sm"><strong class="text-slate-300 uppercase text-xs">Results:</strong> Identified a 10% lag in Tier-1 supplier response times, leading to a new vendor strategy.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="bg-slate-700 px-3 py-1 rounded text-xs font-mono">Power BI</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded text-xs font-mono">SQL</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-20 px-6 bg-white border-t border-slate-100 text-center">
-        <h2 class="text-3xl font-bold mb-8">Get In Touch</h2>
-        <div class="flex flex-col items-center gap-4">
-            <a href="mailto:ridwanayinde@gmail.com" class="text-lg font-semibold text-emerald-600 hover:underline">ridwanayinde@gmail.com</a>
-            <div class="flex gap-6 mt-4">
-                <a href="https://linkedin.com/in/ridwanayinde" class="text-2xl text-slate-400 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-2xl text-slate-400 hover:text-slate-900"><i class="fab fa-github"></i></a>
+    <footer id="contact" class="py-24 px-6 text-center">
+        <div class="max-w-3xl mx-auto bg-white p-12 rounded-[3rem] shadow-2xl border border-slate-100">
+            <h2 class="text-4xl font-bold mb-4 text-slate-900">Let’s Connect</h2>
+            <p class="text-slate-500 mb-10 text-lg">I am currently open to collaboration, roles, or professional discussions.</p>
+            
+            <div class="grid md:grid-cols-2 gap-4 mb-10">
+                <a href="mailto:ridwanayinde@gmail.com" class="p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition flex items-center gap-4 justify-center font-semibold text-slate-700 border border-slate-100">
+                    <i class="fas fa-envelope text-emerald-600"></i> Email Me
+                </a>
+                <a href="https://linkedin.com/in/ridwanayinde" target="_blank" class="p-4 bg-slate-50 rounded-2xl hover:bg-blue-50 transition flex items-center gap-4 justify-center font-semibold text-slate-700 border border-slate-100">
+                    <i class="fab fa-linkedin text-blue-600"></i> LinkedIn
+                </a>
             </div>
-            <p class="mt-10 text-xs text-slate-400 uppercase tracking-widest italic">© 2026 Ridwan B. Ayinde</p>
+            
+            <p class="text-sm text-slate-400">© 2026 Ridwan B. Ayinde • Designed for Efficiency</p>
         </div>
     </footer>
 
