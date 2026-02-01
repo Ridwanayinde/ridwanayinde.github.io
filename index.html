@@ -1,337 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ridwan B. Ayinde | Data Analyst</title>
-  <meta name="description" content="Data Analyst | Operations & Applied Analytics | Energy & Supply Chain"/>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-  
-  <style>
-    :root {
-      --primary: #0d47a1;
-      --bg: #f8f9fa;
-      --text: #212529;
-      --text-light: #495057;
-      --card: white;
-    }
-    
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    
-    /* Fixed header */
-    header {
-      background: var(--primary);
-      color: white;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo { font-size: 1.6rem; font-weight: 700; color: white; text-decoration: none; }
-    
-    .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a { color: white; text-decoration: none; font-weight: 500; }
-    .nav-links a:hover { opacity: 0.85; }
-    
-    .hamburger { display: none; font-size: 2rem; color: white; cursor: pointer; }
-    
-    #nav-toggle { display: none; }
-    .mobile-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: var(--primary);
-      transform: translateY(-100%);
-      opacity: 0;
-      transition: all 0.4s ease;
-      pointer-events: none;
-    }
-    #nav-toggle:checked ~ .mobile-menu {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .mobile-menu ul { list-style: none; padding: 1rem 0; }
-    .mobile-menu li { padding: 1rem 2rem; text-align: center; }
-    .mobile-menu a { color: white; font-size: 1.2rem; display: block; }
-    
-    /* Hero - Full width background + centered content */
-    .hero-wrapper {
-      background: var(--primary);
-      color: white;
-      margin-top: 70px; /* space for fixed header */
-    }
-    
-    .hero {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 10rem 2rem 7rem;
-    }
-    
-    .hero img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid rgba(255,255,255,0.8);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      margin-bottom: 2rem;
-    }
-    
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-    }
-    
-    .hero h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #f0f0f0;
-      margin-bottom: 1.5rem;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
-    
-    .hero .tagline {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      max-width: 700px;
-      margin: 0 auto;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
-    
-    .btn {
-      display: inline-block;
-      background: white;
-      color: var(--primary);
-      padding: 1rem 2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 1.5rem 0.8rem;
-      transition: all 0.3s;
-    }
-    .btn:hover {
-      background: #f0f0f0;
-      transform: translateY(-3px);
-    }
-    
-    section { padding: 8rem 2rem; max-width: 1000px; margin: 0 auto; }
-    h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--primary); }
-    
-    .card {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      margin-bottom: 2rem;
-    }
-    
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
-    .skill-tag {
-      background: #e7f1ff;
-      color: var(--primary);
-      padding: 0.7rem 1.4rem;
-      border-radius: 30px;
-      font-weight: 500;
-    }
-    
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 2rem;
-    }
-    
-    .project-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .project-card:hover { transform: translateY(-8px); }
-    
-    .project-img { width: 100%; height: 200px; object-fit: cover; }
-    .project-content { padding: 1.5rem; }
-    
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin: 1rem 0;
-    }
-    .tech-tag {
-      background: #e7f1ff;
-      color: var(--primary);
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
-    
-    .socials {
-      text-align: center;
-      margin: 4rem 0;
-      font-size: 2.2rem;
-    }
-    .socials a { color: var(--text-light); margin: 0 1.5rem; transition: color 0.3s; }
-    .socials a:hover { color: var(--primary); }
-    
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .hamburger { display: block; }
-      .hero { padding: 9rem 1.5rem 6rem; }
-      .hero h1 { font-size: 3rem; }
-      .hero h2 { font-size: 1.6rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridwan Ayinde | Supply Chain Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans leading-normal">
 
-  <!-- Navigation (same as before) -->
-  <header>
-    <div class="nav-container">
-      <a href="#home" class="logo">Ridwan B. Ayinde</a>
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="https://linkedin.com/in/ridwan-ayinde" target="_blank">LinkedIn</a>
-      </nav>
-      <label for="nav-toggle" class="hamburger"><i class="ti ti-menu-2"></i></label>
-    </div>
-    
-    <input type="checkbox" id="nav-toggle">
-    <div class="mobile-menu">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="https://linkedin.com/in/ridwan-ayinde" target="_blank">LinkedIn</a></li>
-      </ul>
-    </div>
-  </header>
+    <header class="bg-slate-900 text-white py-20 px-6 text-center">
+        <h1 class="text-5xl font-bold mb-4">Ridwan Ayinde</h1>
+        <p class="text-xl text-blue-400 font-medium mb-6">Supply Chain Analyst | Data & Optimization</p>
+        <p class="max-w-2xl mx-auto text-gray-300 text-lg italic">
+            "Transforming complex supply chain data into actionable insights that optimize inventory and drive operational excellence."
+        </p>
+    </header>
 
-  <!-- Hero with wrapper for full-width blue -->
-  <div class="hero-wrapper">
-    <section id="home" class="hero">
-      <img src="profile.jpg" alt="Ridwan B. Ayinde">
-      
-      <h1>Data Analyst</h1>
-      
-      <h2>Operations & Applied Analytics</h2>
-      
-      <div class="tagline">
-        • Data-Driven Decision Support • Optimization & Forecasting • Predictive Modeling 
-      </div>
-      
-      <a href="Ridwan_B_Ayinde_Resume.pdf" download class="btn">Download Resume</a>
-      <a href="#projects" class="btn">View My Work →</a>
+    <section class="max-w-4xl mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block mb-8">About Me</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+            I am a Supply Chain Analyst focused on the intersection of logistics and data science. With a background in [Your Degree], I specialize in demand forecasting, inventory optimization, and process automation. I thrive on turning messy datasets into clear strategic roadmaps.
+        </p>
     </section>
-  </div>
 
-  <!-- Rest of sections (About Me, Experience, etc.) -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-      <p>I'm a passionate data analyst with [X] years of experience turning raw data into business value. My expertise lies in energy sector analytics, supply chain optimization, and building interactive dashboards that help stakeholders make informed decisions.</p>
-      <p>Tech stack I love:</p>
-      <div class="skills-list">
-        <span class="skill-tag">Python (Pandas, NumPy)</span>
-        <span class="skill-tag">SQL</span>
-        <span class="skill-tag">Tableau</span>
-        <span class="skill-tag">Power BI</span>
-        <span class="skill-tag">Excel (Advanced)</span>
-        <span class="skill-tag">Data Visualization</span>
-        <span class="skill-tag">Statistical Analysis</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Keep your Experience, Projects, Contact sections exactly as in previous version -->
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="card">
-      <h3>Data Analyst • [Company Name]</h3>
-      <p>[Month Year] – Present</p>
-      <ul>
-        <li>Analyzed supply chain data leading to 18% cost reduction</li>
-        <li>Built Tableau dashboards tracking energy consumption metrics</li>
-        <li>Automated reporting with Python saving 15+ hours/week</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>[Previous Role] • [Company Name]</h3>
-      <p>[Month Year] – [Month Year]</p>
-      <ul>
-        <li>Developed SQL queries for large-scale datasets</li>
-        <li>Created predictive models for demand forecasting</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid">
-      <!-- Your project cards here -->
-      <div class="project-card">
-        <img src="https://www.thedataschool.co.uk/content/images/2023/12/Screenshot-2023-12-24-212955.png" alt="Energy Dashboard">
-        <div class="project-content">
-          <h3>Energy Consumption Dashboard</h3>
-          <p>Interactive Tableau dashboard...</p>
-          <div class="tech-stack">
-            <span class="tech-tag">Tableau</span><span class="tech-tag">SQL</span><span class="tech-tag">Data Viz</span>
-          </div>
+    <section class="bg-white py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block mb-10">Technical Toolkit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold text-xl mb-4 text-blue-600">Analytics & Data</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Python (Pandas, Scikit-learn)</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> SQL (PostgreSQL, BigQuery)</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Power BI / Tableau</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-4 text-blue-600">Supply Chain Domain</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Demand Forecasting (ARIMA, Prophet)</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Inventory Optimization (Safety Stock)</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> ERP Systems (SAP/Oracle)</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- Second project card... -->
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Get In Touch</h2>
-    <div class="card" style="text-align: center;">
-      <p>I'm currently open to new opportunities in data analytics. Feel free to reach out!</p>
-      <a href="mailto:your.email@example.com" class="btn">Email Me</a>
-    </div>
-    
-    <div class="socials">
-      <a href="https://github.com/ridwanayinde" target="_blank"><i class="ti ti-brand-github"></i></a>
-      <a href="https://linkedin.com/in/ridwan-ayinde" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
-    </div>
-  </section>
+    <section class="max-w-5xl mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold border-b-4 border-blue-500 inline-block mb-10">Key Projects</h2>
+        <div class="grid gap-10">
+            <div class="bg-white p-8 rounded-lg shadow-md border-l-8 border-blue-500">
+                <h3 class="text-2xl font-bold mb-4">Inventory Optimization Dashboard</h3>
+                <p class="mb-2"><strong>Problem:</strong> Excess stock leading to $50k annual holding costs.</p>
+                <p class="mb-2"><strong>Approach:</strong> Cleaned 2 years of SKU data; applied ABC/XYZ analysis in Python.</p>
+                <p class="mb-2"><strong>Results:</strong> Reduced stock-outs by 15% and cut holding costs by 10%.</p>
+                <p class="text-sm font-mono text-blue-600">Tools: Python, SQL, Tableau</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 py-16 px-6">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-2xl font-bold mb-6">Experience</h2>
+                <div class="mb-4">
+                    <p class="font-bold text-lg">Supply Chain Intern</p>
+                    <p class="text-gray-600 italic">Company Name | 2023 - Present</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-6">Education</h2>
+                <div>
+                    <p class="font-bold text-lg">B.Sc. in Supply Chain Management</p>
+                    <p class="text-gray-600 italic">University Name | Graduated 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-16 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">Let's Connect</h2>
+        <div class="flex justify-center space-x-8 mb-8">
+            <a href="mailto:your-email@example.com" class="hover:text-blue-400 text-xl"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://linkedin.com/in/yourprofile" class="hover:text-blue-400 text-xl"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#" class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full font-bold transition">Download CV</a>
+        </div>
+        <p class="text-gray-500 text-sm">&copy; 2026 Ridwan Ayinde</p>
+    </footer>
 
 </body>
 </html>
