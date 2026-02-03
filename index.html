@@ -26,6 +26,7 @@
 
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600 uppercase tracking-widest">
                 <a href="#about" class="hover:text-emerald-600 transition flex items-center gap-2"><i class="fas fa-user-circle"></i> About</a>
+                <a href="#expertise" class="hover:text-emerald-600 transition flex items-center gap-2"><i class="fas fa-layer-group"></i> Expertise</a>
                 <a href="#projects" class="hover:text-emerald-600 transition flex items-center gap-2"><i class="fas fa-chart-bar"></i> Projects</a>
                 <a href="#contact" class="hover:text-emerald-600 transition flex items-center gap-2"><i class="fas fa-paper-plane"></i> Contact</a>
             </div>
@@ -36,66 +37,128 @@
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 flex flex-col space-y-4 text-sm font-semibold text-slate-600 uppercase tracking-widest shadow-lg">
-            <a href="#about" class="hover:text-emerald-600 py-2 border-b border-slate-50">About</a>
-            <a href="#projects" class="hover:text-emerald-600 py-2 border-b border-slate-50">Projects</a>
-            <a href="#contact" class="hover:text-emerald-600 py-2">Contact</a>
+            <a href="#about" class="hover:text-emerald-600 transition py-2 border-b border-slate-50">About</a>
+            <a href="#expertise" class="hover:text-emerald-600 transition py-2 border-b border-slate-50">Expertise</a>
+            <a href="#projects" class="hover:text-emerald-600 transition py-2 border-b border-slate-50">Projects</a>
+            <a href="#contact" class="hover:text-emerald-600 transition py-2">Contact</a>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-16 px-6">
+    <section id="home" class="pt-32 pb-20 px-6">
         <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-8 text-center md:text-left">
+            <div class="md:col-span-8">
                 <span class="inline-block px-4 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold uppercase mb-6 tracking-widest">
                     Available for Strategic Roles
                 </span>
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-slate-900 leading-tight">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-slate-900 leading-tight text-center md:text-left">
                     Supply Chain & <br><span class="text-emerald-600">Operations Analyst</span>
                 </h1>
-                <p class="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed mb-8">
+                <p class="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed mb-8 text-center md:text-left">
                     I help organizations improve supply chain and operational performance by turning data into clear, practical insights that support better planning and decision-making.
                 </p>
-                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#projects" class="bg-slate-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-emerald-600 transition-all shadow-lg">View My Projects</a>
-                    <a href="resume.pdf" class="border-2 border-slate-300 text-slate-700 px-8 py-3 rounded-lg font-bold hover:bg-slate-100 transition-all flex items-center justify-center gap-2">
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="bg-slate-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-emerald-600 transition-all shadow-lg text-center w-full md:w-auto">View My Projects</a>
+                    <a href="resume.pdf" class="border-2 border-slate-300 text-slate-700 px-8 py-3 rounded-lg font-bold hover:bg-slate-100 transition-all flex items-center justify-center gap-2 w-full md:w-auto">
                         <i class="fas fa-download"></i> Download CV
                     </a>
                 </div>
             </div>
             <div class="md:col-span-4 hidden md:block">
-                <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Optimization" class="w-64 h-64 opacity-80 mx-auto">
+                <div class="relative inline-block">
+                    <div class="absolute inset-0 bg-emerald-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Optimization" class="relative z-10 opacity-80 w-64 h-64">
+                </div>
             </div>
         </div>
     </section>
 
+    <div class="max-w-6xl mx-auto px-6 -mt-10 mb-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+                <p class="text-emerald-600 text-xl md:text-2xl font-bold">15%+</p>
+                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Cost Reduction</p>
+            </div>
+            <div class="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+                <p class="text-emerald-600 text-xl md:text-2xl font-bold">98%</p>
+                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Forecast Accuracy</p>
+            </div>
+            <div class="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+                <p class="text-emerald-600 text-xl md:text-2xl font-bold">500+</p>
+                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">SKUs Analyzed</p>
+            </div>
+            <div class="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+                <p class="text-emerald-600 text-xl md:text-2xl font-bold">SQL</p>
+                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Core Proficiency</p>
+            </div>
+        </div>
+    </div>
+
     <section id="about" class="py-20 bg-white px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6 text-slate-900">About Me</h2>
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-4 text-slate-900">
+                <i class="fas fa-user-circle text-emerald-600"></i> About Me
+            </h2>
             <p class="text-lg text-slate-600 leading-relaxed">
-                As a Supply Chain and Operations Analyst, I bridge the gap between complex datasets and operational efficiency. I specialize in identifying bottlenecks and implementing data-driven strategies that optimize last-mile delivery, market segmentation, and logistics performance. My goal is to transform numbers into actionable roadmaps for growth.
+                I am a Supply Chain & Operations Analyst with a strong analytical and engineering foundation. My background allows me to understand operational processes deeply and analyze them from a data-driven perspective. 
+                 <br><br>
+                I focus on using data to support better decisions across supply chain planning, inventory management, and operational performance. 
+                <br><br>
+                My work involves cleaning and analyzing complex datasets, identifying inefficiencies, and translating insights into practical recommendations using Python, SQL, and Excel. 
+                <br><br>
+                I am particularly interested in roles where data is used to improve real-world operations, not just reports.
+                <br><br>
+                I specialize in turning messy datasets into clear strategic roadmaps through <strong>Python</strong>, <strong>SQL</strong>, and <strong>Data Analysis</strong>.
             </p>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-16 text-center text-slate-900">Core Expertise</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all text-center md:text-left">
+                <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 text-2xl mx-auto md:mx-0">
+                    <i class="fas fa-boxes-stacked"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Supply Chain & Ops</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Inventory planning, procurement analysis, logistics coordination, and process improvement.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all text-center md:text-left">
+                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-2xl mx-auto md:mx-0">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Data & Analytics</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Python (Pandas), SQL, and Excel for data cleaning, analysis, and operational reporting.</p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all text-center md:text-left">
+                <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 text-2xl mx-auto md:mx-0">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Decision Support</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Optimization thinking, scenario analysis, and actionable business insights.</p>
+            </div>
         </div>
     </section>
 
     <section id="projects" class="py-20 bg-slate-900 text-white px-6">
         <div class="max-w-6xl mx-auto">
             <div class="mb-16 text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 italic text-emerald-400">Selected Projects</h2>
-                <p class="text-slate-400 max-w-md">Analytics applied to real-world logistical bottlenecks.</p>
+                <h2 class="text-4xl font-bold mb-4 italic text-emerald-400">Selected Projects</h2>
+                <p class="text-slate-400 max-w-md mx-auto md:mx-0">Analytics applied to real-world logistical bottlenecks.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="bg-slate-800 rounded-3xl border border-slate-700 hover:border-emerald-500 transition-all project-card flex flex-col">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="Last Mile Logistics" class="project-image rounded-t-3xl">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-4 text-emerald-400">
-                            <a href="https://github.com/Ridwanayinde/Data-Driven-Last-Mile-Logistics-Optimization-for-Small-Businesses-in-Emerging-Markets" target="_blank" class="hover:underline">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-slate-800 rounded-3xl border border-slate-700 hover:border-emerald-500 transition-all project-card">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="Logistics Optimization" class="project-image">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl font-bold mb-6 text-emerald-400">
+                            <a href="https://github.com/Ridwanayinde/Data-Driven-Last-Mile-Logistics-Optimization-for-Small-Businesses-in-Emerging-Markets" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-emerald-300 transition-colors">
                                 Data-Driven Last-Mile Logistics Optimization
                             </a>
-                        </h3>
-                        <div class="space-y-3 mb-6">
-                            <p class="text-sm text-slate-300"><strong>Problem:</strong> Optimizing delivery for SMEs in emerging markets facing unpredictable delays.</p>
-                            <p class="text-sm text-slate-300"><strong>Approach:</strong> Clustering for demand zones and rider assignment algorithms.</p>
+                        </h3>                    
+                        <div class="space-y-4 mb-8">
+                            <p class="text-xs text-slate-300"><strong>Problem:</strong> Small businesses in emerging markets (e.g., Nigerian e-commerce SMEs) face unpredictable delivery times, human-behavior delays, and lack of data-driven routing decisions leading to inefficiencies and customer dissatisfaction.</p>
+                            <p class="text-xs text-slate-300"><strong>Approach:</strong> Performed demand zone prediction via clustering; developed an intelligent rider assignment algorithm to balance workload and minimize delays.</p>
+                            <p class="text-xs text-slate-300"><strong>Results:</strong> Created a comprehensive data-driven framework for last-mile optimization, enabling better route planning and resource allocation.</p>
                         </div>
                         <div class="flex flex-wrap gap-2">
                             <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">Python</span>
@@ -105,70 +168,68 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-800 rounded-3xl border border-slate-700 hover:border-emerald-500 transition-all project-card flex flex-col">
-                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?q=80&w=800&auto=format&fit=crop" alt="Flight Data Analysis" class="project-image rounded-t-3xl">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-4 text-emerald-400">
-                            <a href="https://github.com/Ridwanayinde/data-analysis-ml-projects/blob/main/Universal_AI_Modules/Market_Segmentation_for_Airlines/Market_Segmentation_for_Airlines.ipynb" target="_blank" class="hover:underline">
+                <div class="bg-slate-800 rounded-3xl border border-slate-700 hover:border-emerald-500 transition-all project-card">
+                    <img src="https://images.unsplash.com/photo-1436491864321-2848ec99b056?q=80&w=800&auto=format&fit=crop" alt="Flight Data Analysis" class="project-image">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl font-bold mb-6 text-emerald-400">
+                            <a href="https://github.com/Ridwanayinde/data-analysis-ml-projects/blob/main/Universal_AI_Modules/Market_Segmentation_for_Airlines/Market_Segmentation_for_Airlines.ipynb" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-emerald-300 transition-colors">
                                 US Flights Data Analysis
                             </a>
                         </h3>
-                        <div class="space-y-3 mb-6">
-                            <p class="text-sm text-slate-300"><strong>Problem:</strong> High costs and dissatisfaction due to flight delays and cancellations.</p>
-                            <p class="text-sm text-slate-300"><strong>Approach:</strong> Large-scale EDA on carrier performance and seasonal trends.</p>
+                        <div class="space-y-4 mb-8">
+                            <p class="text-xs text-slate-300"><strong>Problem:</strong> Airline operations suffer from frequent delays and cancellations, impacting passenger satisfaction, costs, and scheduling efficiency. Understanding patterns is crucial for reliability.</p>
+                            <p class="text-xs text-slate-300"><strong>Approach:</strong> Performed exploratory data analysis on large-scale flight datasets; cleaned data; created visualizations for delay distributions and seasonal trends.</p>
+                            <p class="text-xs text-slate-300"><strong>Results:</strong> Uncovered key insights such as peak delay periods and contributing factors, enabling better-informed operational decisions.</p>
                         </div>
                         <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">Python</span>
                             <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">SQL</span>
                             <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">Seaborn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 rounded-3xl border border-slate-700 hover:border-emerald-500 transition-all project-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Market Segmentation" class="project-image">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl font-bold mb-6 text-emerald-400">
+                            <a href="https://github.com/Ridwanayinde/data-analysis-ml-projects/tree/main/Universal_AI_Modules/Market_Segmentation_for_Airlines" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-emerald-300 transition-colors">
+                                Market Segmentation for Airlines
+                            </a>
+                        </h3>
+                        <div class="space-y-4 mb-8">
+                            <p class="text-xs text-slate-300"><strong>Problem:</strong> Airlines struggle to understand diverse customer groups, leading to generic marketing strategies and missed revenue opportunities from personalized offers.</p>
+                            <p class="text-xs text-slate-300"><strong>Approach:</strong> Conducted customer segmentation using k-means clustering on passenger data; performed feature engineering and visualized business personas.</p>
+                            <p class="text-xs text-slate-300"><strong>Results:</strong> Identified distinct segments (high-value vs leisure) provided actionable insights for targeted marketing and tiered loyalty rewards.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">Scikit-learn</span>
+                            <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">K-Means</span>
                             <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">Matplotlib</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-slate-800 rounded-3xl border border-slate-700 hover:border-emerald-500 transition-all project-card flex flex-col">
-                    <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=800&auto=format&fit=crop" alt="Market Segmentation" class="project-image rounded-t-3xl">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-4 text-emerald-400">
-                            <a href="https://github.com/Ridwanayinde/data-analysis-ml-projects/tree/main/Universal_AI_Modules/Market_Segmentation_for_Airlines" target="_blank" class="hover:underline">
-                                Market Segmentation for Airlines
-                            </a>
-                        </h3>
-                        <div class="space-y-3 mb-6">
-                            <p class="text-sm text-slate-300"><strong>Problem:</strong> Lack of personalized marketing and suboptimal loyalty programs.</p>
-                            <p class="text-sm text-slate-300"><strong>Approach:</strong> Unsupervised ML (K-Means) to identify high-value customer personas.</p>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">Scikit-Learn</span>
-                            <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">Python</span>
-                            <span class="bg-slate-700 px-2 py-1 rounded text-[10px] font-mono">Clustering</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
     <footer id="contact" class="py-24 px-6 text-center">
-        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-slate-100">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] shadow-xl border border-slate-100">
             <h2 class="text-3xl font-bold mb-4 text-slate-900">Let's Connect</h2>
             <p class="text-slate-500 mb-10">Currently open to roles or data consulting projects.</p>
             
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-                <a href="mailto:ridwanayinde@gmail.com" class="p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition flex flex-col items-center gap-2 justify-center font-semibold text-slate-700 border border-slate-100">
-                    <i class="fas fa-envelope text-emerald-600 text-xl"></i> 
-                    <span class="text-xs">Email Me</span>
+            <div class="flex flex-col md:flex-row flex-wrap gap-4 justify-center mb-10">
+                <a href="mailto:ridwanbabatundeayinde@gmail.com" class="p-4 bg-slate-50 rounded-2xl hover:bg-emerald-50 transition flex items-center gap-4 justify-center font-semibold text-slate-700 border border-slate-100 flex-1 min-w-[280px]">
+                    <i class="fas fa-envelope text-emerald-600"></i> ridwanbabatundeayinde@gmail.com
                 </a>
-                <a href="https://linkedin.com/in/ridwanayinde" target="_blank" class="p-4 bg-slate-50 rounded-2xl hover:bg-blue-50 transition flex flex-col items-center gap-2 justify-center font-semibold text-slate-700 border border-slate-100">
-                    <i class="fab fa-linkedin text-blue-600 text-xl"></i> 
-                    <span>LinkedIn</span>
+                <a href="https://linkedin.com/in/ridwanayinde" target="_blank" class="p-4 bg-slate-50 rounded-2xl hover:bg-blue-50 transition flex items-center gap-4 justify-center font-semibold text-slate-700 border border-slate-100 flex-1 min-w-[200px]">
+                    <i class="fab fa-linkedin text-blue-600"></i> LinkedIn
                 </a>
-                <a href="https://x.com/RidwanAyinde25" target="_blank" class="p-4 bg-slate-50 rounded-2xl hover:bg-slate-100 transition flex flex-col items-center gap-2 justify-center font-semibold text-slate-700 border border-slate-100">
-                    <i class="fa-brands fa-x-twitter text-slate-900 text-xl"></i> 
-                    <span>X (Twitter)</span>
+                <a href="https://x.com/RidwanAyinde25" target="_blank" class="p-4 bg-slate-50 rounded-2xl hover:bg-slate-100 transition flex items-center gap-4 justify-center font-semibold text-slate-700 border border-slate-100 flex-1 min-w-[200px]">
+                    <i class="fab fa-x-twitter text-slate-900"></i> Follow on X
                 </a>
             </div>
-            <p class="text-xs text-slate-400">© 2026 Ridwan B. Ayinde • Built for Performance</p>
+            <p class="text-xs text-slate-400">© 2026 Ridwan B. Ayinde • Build for Performance</p>
         </div>
     </footer>
 
